@@ -1,40 +1,55 @@
 import configparser
+import os
 
-# Load config.ini
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-input_file1 = config.get('command files', 'on_format')
-input_file2 = config.get('command files', 'off_format')
+def process_files(file1, file2):
+    with open(file1, 'r') as f1, open(file2, 'r') as f2:
+        lines1 = f1.readlines()
+        lines2 = f2.readlines()
+        # Filter process for file1
+        for i in range (len(lines1)):
+            lines1[i] = lines1[i].split(':', 1)[-1]
+            lines1[i] = ''.join([c for c in lines1[i] if not c.isalpha()])
+            lines1[i] = lines1[i].replace(':', '', 1)
+        # Filter process for file2
+        for i in range(len(lines2)):
+            lines2[i] = lines2[i].split(':', 1)[-1]
+            lines2[i] = ''.join([c for c in lines2[i] if not c.isalpha()])
+            lines2[i] = lines2[i].replace(':', '', 1)
+        # Remove empty lines & move up the data.
+        lines1 = [line.strip() for line in lines1 if line.strip()]
+        lines2 = [line.strip() for line in lines2 if line.strip()]
+        with open(file1, 'w') as f1, open(file2, 'w') as f2:
+            f1.writelines('\n'.join(lines1))
+            f2.writelines('\n'.join(lines2))
+        with open(file1, 'r') as f1, open(file2, 'r') as f2:
+            lines1 = f1.readlines()
+            lines2 = f2.readlines()
+            for i in range(min(len(lines1), len(lines2))):
+                if lines1[i] != lines2[i]:
+                    print("---------------------------")
+                    print(f'Line {i + 1}:')
+                    print(f'{file1}: {lines1[i]}')
+                    print(f'{file2}: {lines2[i]}')
 
-with open(input_file1, 'r') as f1, open(input_file2, 'r') as f2:
-    lines1 = f1.readlines()
-    lines2 = f2.readlines()
+# Loop through each section in the config file
+for section in config.sections():
+    section_items = list(config.items(section))
+    num_items = len(section_items)
+    if section == 'on_off':
+        print("---------------------------")
+        print(f"Processing section: {section}")
+        for i in range(0, num_items - 1, 2):
+            file1 = section_items[i][1]
+            file2 = section_items[i+1][1]
+            process_files(file1, file2)
+    if section == 'temp':
+        print("---------------------------")
+        print(f"Processing section: {section}")
+        for i in range(0, num_items - 1, 2):
+            file1 = section_items[i][1]
+            file2 = section_items[i+1][1]
+            process_files(file1, file2)
 
-for i in range(len(lines1)):
-    # Split the line by ":"
-    lines1[i] = lines1[i].split(':', 1)[-1]
-    # Remove any alphabets
-    lines1[i] = ''.join([c for c in lines1[i] if not c.isalpha()])
-    # Replace the second ":" with an empty string
-    lines1[i] = lines1[i].replace(':', '', 1)
-
-for i in range(len(lines2)):
-    lines2[i] = lines2[i].split(':', 1)[-1]
-    lines2[i] = ''.join([c for c in lines2[i] if not c.isalpha()])
-    lines2[i] = lines2[i].replace(':', '', 1)
-
-# Rewrite
-with open(input_file1, 'w') as f1, open(input_file2, 'w') as f2:
-    f1.writelines(lines1)
-    f2.writelines(lines2)
-
-# Comparison
-with open(input_file1, 'r') as file1, open(input_file2, 'r') as file2:
-    lines1 = file1.readlines()
-    lines2 = file2.readlines()
-
-    # Compare the lines in both files and print the differences
-    for i in range(min(len(lines1), len(lines2))):
-        if lines1[i] != lines2[i]:
-            print(f'Line {i + 1} in both files is different:')

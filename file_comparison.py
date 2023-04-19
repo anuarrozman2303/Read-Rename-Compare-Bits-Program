@@ -32,3 +32,5 @@ with open(input_file1, 'r') as file1, open(input_file2, 'r') as file2:
     for i in range(min(len(lines1), len(lines2))):
         if lines1[i] != lines2[i]:
             print(f'Line {i+1} in both files is different:')
+            print(f'{input_file1}: {lines1[i]}')
+            print(f'{input_file2}: {lines2[i]}')
