@@ -4,6 +4,10 @@ import os
 config = configparser.ConfigParser()
 config.read('config.ini')
 
+# Create a new directory for the output files
+output_dir = 'output'
+os.makedirs(output_dir, exist_ok=True)
+
 def process_files(file1, file2, output_file):
     with open(file1, 'r') as f1, open(file2, 'r') as f2:
         lines1 = f1.readlines()
@@ -38,35 +42,56 @@ for section in config.sections():
         first_file = section_items[0][1]
         for item in section_items[1:]:
             current_file = item[1]
-            output_file = f"{first_file}_vs_{current_file}.txt"
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
     elif section == 'temp':
         # Extract the file path for the first key-value & save it to first_file
         first_file = section_items[0][1]
         for item in section_items[1:]:
             current_file = item[1]
-            output_file = f"{first_file}_vs_{current_file}.txt"
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
     elif section == 'mode':
         # Extract the file path for the first key-value & save it to first_file
         first_file = section_items[0][1]
         for item in section_items[1:]:
             current_file = item[1]
-            output_file = f"{first_file}_vs_{current_file}.txt"
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
     elif section == 'fanspeed':
         # Extract the file path for the first key-value & save it to first_file
         first_file = section_items[0][1]
         for item in section_items[1:]:
             current_file = item[1]
-            output_file = f"{first_file}_vs_{current_file}.txt"
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
     elif section == 'vswing':
         # Extract the file path for the first key-value & save it to first_file
         first_file = section_items[0][1]
         for item in section_items[1:]:
             current_file = item[1]
-            output_file = f"{first_file}_vs_{current_file}.txt"
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
+            process_files(first_file, current_file, output_file)
+    elif section == 'hswing':
+        # Extract the file path for the first key-value & save it to first_file
+        first_file = section_items[0][1]
+        for item in section_items[1:]:
+            current_file = item[1]
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
+            process_files(first_file, current_file, output_file)
+    elif section == 'special':
+        # Extract the file path for the first key-value & save it to first_file
+        first_file = section_items[0][1]
+        for item in section_items[1:]:
+            current_file = item[1]
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
+            process_files(first_file, current_file, output_file)
+    elif section == 'comfort':
+        # Extract the file path for the first key-value & save it to first_file
+        first_file = section_items[0][1]
+        for item in section_items[1:]:
+            current_file = item[1]
+            output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
 
 
