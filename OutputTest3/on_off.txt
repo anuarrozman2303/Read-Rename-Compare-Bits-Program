@@ -1,2 +1,0 @@
---- on_off ---
-Comparing on_format with off_format
