@@ -1,17 +1,14 @@
 ---------------------------
-fan_sp4_format: speed4.txt
 fanspeed
 Line 199:
 auto.txt: 0
 speed4.txt: 1
 ---------------------------
-fan_sp4_format: speed4.txt
 fanspeed
 Line 200:
 auto.txt: 1
 speed4.txt: 0
 ---------------------------
-fan_sp4_format: speed4.txt
 fanspeed
 Line 279:
 auto.txt: 1

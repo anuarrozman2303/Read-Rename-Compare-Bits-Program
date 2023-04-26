@@ -1,35 +1,29 @@
 ---------------------------
-vswing_on_format: vswingon.txt
 vswing
 Line 193:
 vswingoff.txt: 0
 vswingon.txt: 1
 ---------------------------
-vswing_on_format: vswingon.txt
 vswing
 Line 194:
 vswingoff.txt: 0
 vswingon.txt: 1
 ---------------------------
-vswing_on_format: vswingon.txt
 vswing
 Line 195:
 vswingoff.txt: 0
 vswingon.txt: 1
 ---------------------------
-vswing_on_format: vswingon.txt
 vswing
 Line 196:
 vswingoff.txt: 0
 vswingon.txt: 1
 ---------------------------
-vswing_on_format: vswingon.txt
 vswing
 Line 273:
 vswingoff.txt: 1
 vswingon.txt: 0
 ---------------------------
-vswing_on_format: vswingon.txt
 vswing
 Line 277:
 vswingoff.txt: 0

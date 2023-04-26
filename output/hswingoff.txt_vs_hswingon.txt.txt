@@ -1,47 +1,39 @@
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 201:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 202:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 203:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 204:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 273:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 274:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 275:
 hswingoff.txt: 0
 hswingon.txt: 1
 ---------------------------
-hswing_on_format: hswingon.txt
 hswing
 Line 276:
 hswingoff.txt: 0

@@ -1,11 +1,9 @@
 ---------------------------
-fan_night_format: night.txt
 fanspeed
 Line 197:
 auto.txt: 0
 night.txt: 1
 ---------------------------
-fan_night_format: night.txt
 fanspeed
 Line 277:
 auto.txt: 0

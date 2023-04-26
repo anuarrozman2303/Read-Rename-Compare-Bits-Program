@@ -1,11 +1,9 @@
 ---------------------------
-quiet_format: quiet.txt
 special
 Line 238:
 econo_quiet_off.txt: 0
 quiet.txt: 1
 ---------------------------
-quiet_format: quiet.txt
 special
 Line 278:
 econo_quiet_off.txt: 0

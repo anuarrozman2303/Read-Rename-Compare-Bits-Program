@@ -1,23 +1,19 @@
 ---------------------------
-comfort_on_format: comfort_on.txt
 comfort
 Line 53:
 comfort_off.txt: 0
 comfort_on.txt: 1
 ---------------------------
-comfort_on_format: comfort_on.txt
 comfort
 Line 61:
 comfort_off.txt: 0
 comfort_on.txt: 1
 ---------------------------
-comfort_on_format: comfort_on.txt
 comfort
 Line 258:
 comfort_off.txt: 0
 comfort_on.txt: 1
 ---------------------------
-comfort_on_format: comfort_on.txt
 comfort
 Line 274:
 comfort_off.txt: 0

@@ -1,29 +1,24 @@
 ---------------------------
-mode_fan_format: fan.txt
 mode
 Line 173:
 cool.txt: 1
 fan.txt: 0
 ---------------------------
-mode_fan_format: fan.txt
 mode
 Line 175:
 cool.txt: 0
 fan.txt: 1
 ---------------------------
-mode_fan_format: fan.txt
 mode
 Line 277:
 cool.txt: 1
 fan.txt: 0
 ---------------------------
-mode_fan_format: fan.txt
 mode
 Line 279:
 cool.txt: 1
 fan.txt: 0
 ---------------------------
-mode_fan_format: fan.txt
 mode
 Line 280:
 cool.txt: 0

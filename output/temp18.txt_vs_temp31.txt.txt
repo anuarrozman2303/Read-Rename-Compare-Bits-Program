@@ -1,41 +1,34 @@
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 178:
 temp18.txt: 0
 temp31.txt: 1
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 180:
 temp18.txt: 0
 temp31.txt: 1
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 181:
 temp18.txt: 0
 temp31.txt: 1
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 274:
 temp18.txt: 1
 temp31.txt: 0
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 275:
 temp18.txt: 0
 temp31.txt: 1
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 276:
 temp18.txt: 0
 temp31.txt: 1
 ---------------------------
-temp31_format: temp31.txt
 temp
 Line 277:
 temp18.txt: 0
