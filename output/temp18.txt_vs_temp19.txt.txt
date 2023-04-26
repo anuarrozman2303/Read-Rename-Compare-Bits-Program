@@ -1,0 +1,18 @@
+---------------------------
+temp19_format: temp19.txt
+temp
+Line 178:
+temp18.txt: 0
+temp19.txt: 1
+---------------------------
+temp19_format: temp19.txt
+temp
+Line 274:
+temp18.txt: 1
+temp19.txt: 0
+---------------------------
+temp19_format: temp19.txt
+temp
+Line 275:
+temp18.txt: 0
+temp19.txt: 1

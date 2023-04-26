@@ -1,0 +1,30 @@
+---------------------------
+fanspeed
+Line 197:
+speed2.txt: 0
+speed5.txt: 1
+---------------------------
+fanspeed
+Line 198:
+speed2.txt: 0
+speed5.txt: 1
+---------------------------
+fanspeed
+Line 277:
+speed2.txt: 0
+speed5.txt: 1
+---------------------------
+fanspeed
+Line 278:
+speed2.txt: 1
+speed5.txt: 0
+---------------------------
+fanspeed
+Line 279:
+speed2.txt: 1
+speed5.txt: 0
+---------------------------
+fanspeed
+Line 280:
+speed2.txt: 1
+speed5.txt: 0

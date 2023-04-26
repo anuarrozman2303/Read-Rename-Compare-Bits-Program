@@ -1,0 +1,24 @@
+---------------------------
+temp24_format: temp24.txt
+temp
+Line 179:
+temp18.txt: 1
+temp24.txt: 0
+---------------------------
+temp24_format: temp24.txt
+temp
+Line 181:
+temp18.txt: 0
+temp24.txt: 1
+---------------------------
+temp24_format: temp24.txt
+temp
+Line 275:
+temp18.txt: 0
+temp24.txt: 1
+---------------------------
+temp24_format: temp24.txt
+temp
+Line 276:
+temp18.txt: 0
+temp24.txt: 1

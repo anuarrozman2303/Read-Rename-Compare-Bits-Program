@@ -1,0 +1,35 @@
+---------------------------
+temp
+Line 178:
+temp29.txt: 1
+temp32.txt: 0
+---------------------------
+temp
+Line 180:
+temp29.txt: 1
+temp32.txt: 0
+---------------------------
+temp
+Line 181:
+temp29.txt: 1
+temp32.txt: 0
+---------------------------
+temp
+Line 182:
+temp29.txt: 1
+temp32.txt: 0
+---------------------------
+temp
+Line 183:
+temp29.txt: 0
+temp32.txt: 1
+---------------------------
+temp
+Line 274:
+temp29.txt: 0
+temp32.txt: 1
+---------------------------
+temp
+Line 275:
+temp29.txt: 0
+temp32.txt: 1

@@ -1,0 +1,30 @@
+---------------------------
+temp23_format: temp23.txt
+temp
+Line 178:
+temp18.txt: 0
+temp23.txt: 1
+---------------------------
+temp23_format: temp23.txt
+temp
+Line 180:
+temp18.txt: 0
+temp23.txt: 1
+---------------------------
+temp23_format: temp23.txt
+temp
+Line 274:
+temp18.txt: 1
+temp23.txt: 0
+---------------------------
+temp23_format: temp23.txt
+temp
+Line 275:
+temp18.txt: 0
+temp23.txt: 1
+---------------------------
+temp23_format: temp23.txt
+temp
+Line 276:
+temp18.txt: 0
+temp23.txt: 1

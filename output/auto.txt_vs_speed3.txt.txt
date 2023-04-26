@@ -1,0 +1,42 @@
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 197:
+auto.txt: 0
+speed3.txt: 1
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 198:
+auto.txt: 1
+speed3.txt: 0
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 199:
+auto.txt: 0
+speed3.txt: 1
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 200:
+auto.txt: 1
+speed3.txt: 0
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 277:
+auto.txt: 0
+speed3.txt: 1
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 278:
+auto.txt: 0
+speed3.txt: 1
+---------------------------
+fan_sp3_format: speed3.txt
+fanspeed
+Line 280:
+auto.txt: 0
+speed3.txt: 1

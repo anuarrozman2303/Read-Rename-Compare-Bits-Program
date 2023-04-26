@@ -1,0 +1,66 @@
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 173:
+cool.txt: 1
+dry.txt: 0
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 178:
+cool.txt: 1
+dry.txt: 0
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 181:
+cool.txt: 1
+dry.txt: 0
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 182:
+cool.txt: 1
+dry.txt: 0
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 183:
+cool.txt: 0
+dry.txt: 1
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 184:
+cool.txt: 0
+dry.txt: 1
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 274:
+cool.txt: 0
+dry.txt: 1
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 275:
+cool.txt: 0
+dry.txt: 1
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 276:
+cool.txt: 0
+dry.txt: 1
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 277:
+cool.txt: 1
+dry.txt: 0
+---------------------------
+mode_dry_format: dry.txt
+mode
+Line 280:
+cool.txt: 0
+dry.txt: 1

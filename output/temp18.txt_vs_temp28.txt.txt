@@ -1,0 +1,30 @@
+---------------------------
+temp28_format: temp28.txt
+temp
+Line 179:
+temp18.txt: 1
+temp28.txt: 0
+---------------------------
+temp28_format: temp28.txt
+temp
+Line 180:
+temp18.txt: 0
+temp28.txt: 1
+---------------------------
+temp28_format: temp28.txt
+temp
+Line 181:
+temp18.txt: 0
+temp28.txt: 1
+---------------------------
+temp28_format: temp28.txt
+temp
+Line 275:
+temp18.txt: 0
+temp28.txt: 1
+---------------------------
+temp28_format: temp28.txt
+temp
+Line 277:
+temp18.txt: 0
+temp28.txt: 1

@@ -1,0 +1,12 @@
+---------------------------
+temp22_format: temp22.txt
+temp
+Line 180:
+temp18.txt: 0
+temp22.txt: 1
+---------------------------
+temp22_format: temp22.txt
+temp
+Line 276:
+temp18.txt: 0
+temp22.txt: 1

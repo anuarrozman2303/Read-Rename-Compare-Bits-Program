@@ -1,5 +1,5 @@
 --- fanspeed ---
-Comparing fan_auto_format with fan_night_format
+Comparing fan_auto  with fan_night 
 1                                       1
 0                                       0
 0                                       0
@@ -285,7 +285,7 @@ Frame Break
 1                                       1
 0                                       0
 
-Comparing fan_auto_format with fan_sp1_format
+Comparing fan_auto  with fan_sp1 
 1                                       1
 0                                       0
 0                                       0
@@ -571,7 +571,7 @@ Frame Break
 1                                       1
 0                                       1
 
-Comparing fan_auto_format with fan_sp2_format
+Comparing fan_auto  with fan_sp2 
 1                                       1
 0                                       0
 0                                       0
@@ -857,7 +857,7 @@ Frame Break
 1                                       1
 0                                       1
 
-Comparing fan_auto_format with fan_sp3_format
+Comparing fan_auto  with fan_sp3 
 1                                       1
 0                                       0
 0                                       0
@@ -1143,7 +1143,7 @@ Frame Break
 1                                       1
 0                                       1
 
-Comparing fan_auto_format with fan_sp4_format
+Comparing fan_auto  with fan_sp4 
 1                                       1
 0                                       0
 0                                       0
@@ -1429,7 +1429,7 @@ Frame Break
 1                                       0
 0                                       0
 
-Comparing fan_auto_format with fan_sp5_format
+Comparing fan_auto  with fan_sp5 
 1                                       1
 0                                       0
 0                                       0

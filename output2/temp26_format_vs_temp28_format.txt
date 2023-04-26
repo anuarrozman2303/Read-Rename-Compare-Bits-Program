@@ -1,0 +1,15 @@
+---------------------------
+temp
+Line 179:
+temp26.txt: 1
+temp28.txt: 0
+---------------------------
+temp
+Line 180:
+temp26.txt: 0
+temp28.txt: 1
+---------------------------
+temp
+Line 275:
+temp26.txt: 0
+temp28.txt: 1
