@@ -5,7 +5,7 @@ config = configparser.ConfigParser()
 config.read('configsample.ini')
 
 # Create a new directory for the output files
-output_dir = 'output'
+output_dir = '27April_Output'
 os.makedirs(output_dir, exist_ok=True)
 
 def process_files(file1, file2, output_file):
@@ -64,7 +64,7 @@ def process_section(section, section_items, output_dir):
         process_files(first_file, current_file, output_file)
 
 # Create output folder if it doesn't exist
-output_dir = "outputtest"
+output_dir = "27April_Output"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 

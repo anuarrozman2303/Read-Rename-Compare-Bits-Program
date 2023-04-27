@@ -1,0 +1,9 @@
+on.txt vs off.txt:
+Total changes:
+169, "1", SetTo "0"
+273, "0", SetTo "1"
+274, "0", SetTo "1"
+275, "0", SetTo "1"
+276, "0", SetTo "1"
+277, "1", SetTo "0"
+

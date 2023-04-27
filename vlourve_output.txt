@@ -1,7 +1,9 @@
-The SetTo "0" or "1" is depends on the comparison
-(273, 1), "0", SetTo "1"
+vlourveon.txt vs vlourveoff.txt:
+Total changes:
 (193, 1), "1", SetTo "0"
 (194, 1), "1", SetTo "0"
 (195, 1), "1", SetTo "0"
 (196, 1), "1", SetTo "0"
+(273, 1), "0", SetTo "1"
 (277, 1), "1", SetTo "0"
+

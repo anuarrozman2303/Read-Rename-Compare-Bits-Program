@@ -4,7 +4,11 @@ import os
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
-def process_files(file1, file2):
+# Create a new directory for the output files
+output_dir = 'output'
+os.makedirs(output_dir, exist_ok=True)
+
+def process_files(file1, file2, output_file):
     with open(file1, 'r') as f1, open(file2, 'r') as f2:
         lines1 = f1.readlines()
         lines2 = f2.readlines()
@@ -42,26 +46,32 @@ def process_files(file1, file2):
         positions_0 = sorted(positions_0)
         positions_1 = sorted(positions_1)
 
-        # Write output as string
-        output_str = f'Total changes:\n'
-        for pos in sorted(positions_0 + positions_1):
-            if pos in positions_0:
-                output_str += f'{pos[0]}, "0", SetTo "1"\n'
-            elif pos in positions_1:
-                output_str += f'{pos[0]}, "1", SetTo "0"\n'
-        return output_str
+        # Write output file with counts and positions
+        with open(output_file, 'w') as output:
+            output.write(f'Total changes:\n')
+            for pos in sorted(positions_0 + positions_1):
+                if pos in positions_0:
+                    output.write(f'{pos}, "0", SetTo "1"\n')
+                elif pos in positions_1:
+                    output.write(f'{pos}, "1", SetTo "0"\n')
+
+
+def process_section(section, section_items, output_dir):
+    section_dir = os.path.join(output_dir, section)
+    os.makedirs(section_dir, exist_ok=True)
+    first_file = section_items[0][1]
+    for item in section_items[1:]:
+        current_file = item[1]
+        output_file = os.path.join(section_dir, f"{first_file}_vs_{current_file}.txt")
+        process_files(first_file, current_file, output_file)
+
+# Create output folder if it doesn't exist
+output_dir = "outputtest"
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 # Loop through each section in the config file
 for section in config.sections():
+    section_items = list(config.items(section))
     if section in ['on_off', 'temp', 'mode', 'fan', 'vlourve', 'hlourve', 'misc1', 'misc2']:
-        section_output_str = ''
-        section_items = list(config.items(section))
-        first_file = section_items[0][1]
-        for item in section_items[1:]:
-            current_file = item[1]
-            output_str = process_files(first_file, current_file)
-            section_output_str += f'{first_file} vs {current_file}:\n{output_str}\n'
-        # Write output to file
-        output_file = f'test3_{section}_output.txt'
-        with open(output_file, 'w') as f:
-            f.write(section_output_str)
+        process_section(section, section_items, output_dir)

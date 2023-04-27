@@ -1,4 +1,0 @@
-The SetTo "0" or "1" is depends on the comparison
-(180, 1), "0", SetTo "1"
-(277, 1), "0", SetTo "1"
-(276, 1), "1", SetTo "0"
