@@ -6,10 +6,10 @@ import configparser
 import os
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('configsample.ini')
 
 # Create a new directory for the output files
-output_dir = 'output'
+output_dir = 'outputmain'
 os.makedirs(output_dir, exist_ok=True)
 
 def process_files(file1, file2, output_file):
@@ -46,13 +46,13 @@ def process_section(section, section_items, output_dir):
         process_files(first_file, current_file, output_file)
 
 # Create output folder if it doesn't exist
-output_dir = "output"
+output_dir = "outputmain"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # Loop through each section in the config file
 for section in config.sections():
     section_items = list(config.items(section))
-    if section in ['on_off', 'temp', 'mode', 'fanspeed', 'vswing', 'hswing', 'special', 'comfort']:
+    if section in ['on_off', 'temp', 'mode', 'fan', 'vlourve', 'hlourve', 'misc1', 'misc2']:
         process_section(section, section_items, output_dir)
 

@@ -1,0 +1,15 @@
+---------------------------
+fan
+Line 198:
+speed1.txt: 1
+speed3.txt: 0
+---------------------------
+fan
+Line 199:
+speed1.txt: 0
+speed3.txt: 1
+---------------------------
+fan
+Line 278:
+speed1.txt: 0
+speed3.txt: 1

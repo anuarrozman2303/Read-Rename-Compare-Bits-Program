@@ -11,7 +11,7 @@ config.read('config.ini')
 
 # Loop through each section in the config file
 for section in config.sections():
-    if section in ['on_off', 'temp', 'mode', 'fanspeed', 'vswing', 'hswing', 'special', 'comfort']:
+    if section in ['on_off', 'temp', 'mode', 'fanspeed', 'vlourve', 'hlourve', 'special', 'comfort']:
         section_items = list(config.items(section))
         output_path = os.path.join(output_dir, f"{section}.txt")
         # Open the output file for writing

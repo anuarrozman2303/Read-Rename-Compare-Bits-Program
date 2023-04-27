@@ -1,55 +1,12 @@
----------------------------
-mode
-Line 173:
-cool.txt: 1
-dry.txt: 0
----------------------------
-mode
-Line 178:
-cool.txt: 1
-dry.txt: 0
----------------------------
-mode
-Line 181:
-cool.txt: 1
-dry.txt: 0
----------------------------
-mode
-Line 182:
-cool.txt: 1
-dry.txt: 0
----------------------------
-mode
-Line 183:
-cool.txt: 0
-dry.txt: 1
----------------------------
-mode
-Line 184:
-cool.txt: 0
-dry.txt: 1
----------------------------
-mode
-Line 274:
-cool.txt: 0
-dry.txt: 1
----------------------------
-mode
-Line 275:
-cool.txt: 0
-dry.txt: 1
----------------------------
-mode
-Line 276:
-cool.txt: 0
-dry.txt: 1
----------------------------
-mode
-Line 277:
-cool.txt: 1
-dry.txt: 0
----------------------------
-mode
-Line 280:
-cool.txt: 0
-dry.txt: 1
+The SetTo "0" or "1" is depends on the comparison
+(183, 1), "0", SetTo "1"
+(184, 1), "0", SetTo "1"
+(274, 1), "0", SetTo "1"
+(275, 1), "0", SetTo "1"
+(276, 1), "0", SetTo "1"
+(280, 1), "0", SetTo "1"
+(173, 1), "1", SetTo "0"
+(178, 1), "1", SetTo "0"
+(181, 1), "1", SetTo "0"
+(182, 1), "1", SetTo "0"
+(277, 1), "1", SetTo "0"

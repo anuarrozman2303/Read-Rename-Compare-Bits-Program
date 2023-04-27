@@ -65,14 +65,14 @@ for section in config.sections():
             current_file = item[1]
             output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
-    elif section == 'vswing':
+    elif section == 'vlourve':
         # Extract the file path for the first key-value & save it to first_file
         first_file = section_items[0][1]
         for item in section_items[1:]:
             current_file = item[1]
             output_file = os.path.join(output_dir, f"{first_file}_vs_{current_file}.txt")
             process_files(first_file, current_file, output_file)
-    elif section == 'hswing':
+    elif section == 'hlourve':
         # Extract the file path for the first key-value & save it to first_file
         first_file = section_items[0][1]
         for item in section_items[1:]:

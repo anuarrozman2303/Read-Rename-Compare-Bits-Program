@@ -1,20 +1,5 @@
----------------------------
-special
-Line 238:
-econo_quiet_off.txt: 0
-econo_quiet.txt: 1
----------------------------
-special
-Line 259:
-econo_quiet_off.txt: 0
-econo_quiet.txt: 1
----------------------------
-special
-Line 275:
-econo_quiet_off.txt: 0
-econo_quiet.txt: 1
----------------------------
-special
-Line 278:
-econo_quiet_off.txt: 0
-econo_quiet.txt: 1
+The SetTo "0" or "1" is depends on the comparison
+(238, 1), "0", SetTo "1"
+(259, 1), "0", SetTo "1"
+(275, 1), "0", SetTo "1"
+(278, 1), "0", SetTo "1"

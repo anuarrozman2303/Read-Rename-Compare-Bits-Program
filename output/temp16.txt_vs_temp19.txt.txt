@@ -1,0 +1,6 @@
+The SetTo "0" or "1" is depends on the comparison
+(178, 1), "0", SetTo "1"
+(179, 1), "0", SetTo "1"
+(181, 1), "1", SetTo "0"
+(274, 1), "1", SetTo "0"
+(276, 1), "1", SetTo "0"

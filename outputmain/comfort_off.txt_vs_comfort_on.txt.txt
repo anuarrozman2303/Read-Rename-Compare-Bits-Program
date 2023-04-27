@@ -1,0 +1,20 @@
+---------------------------
+misc2
+Line 53:
+comfort_off.txt: 0
+comfort_on.txt: 1
+---------------------------
+misc2
+Line 61:
+comfort_off.txt: 0
+comfort_on.txt: 1
+---------------------------
+misc2
+Line 258:
+comfort_off.txt: 0
+comfort_on.txt: 1
+---------------------------
+misc2
+Line 274:
+comfort_off.txt: 0
+comfort_on.txt: 1

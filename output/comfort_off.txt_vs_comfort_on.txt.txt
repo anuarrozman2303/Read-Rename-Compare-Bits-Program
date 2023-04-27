@@ -1,20 +1,5 @@
----------------------------
-comfort
-Line 53:
-comfort_off.txt: 0
-comfort_on.txt: 1
----------------------------
-comfort
-Line 61:
-comfort_off.txt: 0
-comfort_on.txt: 1
----------------------------
-comfort
-Line 258:
-comfort_off.txt: 0
-comfort_on.txt: 1
----------------------------
-comfort
-Line 274:
-comfort_off.txt: 0
-comfort_on.txt: 1
+The SetTo "0" or "1" is depends on the comparison
+(53, 1), "0", SetTo "1"
+(61, 1), "0", SetTo "1"
+(258, 1), "0", SetTo "1"
+(274, 1), "0", SetTo "1"

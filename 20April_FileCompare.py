@@ -53,6 +53,6 @@ if not os.path.exists(output_dir):
 # Loop through each section in the config file
 for section in config.sections():
     section_items = list(config.items(section))
-    if section in ['on_off', 'temp', 'mode', 'fanspeed', 'vswing', 'hswing', 'special', 'comfort']:
+    if section in ['on_off', 'temp', 'mode', 'fanspeed', 'vlourve', 'hlourve', 'special', 'comfort']:
         process_section(section, section_items, output_dir)
 
