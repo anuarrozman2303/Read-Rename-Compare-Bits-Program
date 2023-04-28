@@ -47,18 +47,18 @@ def process_files(file1, file2):
         hex_positions_1 = [(pos[0], pos[1], pos[0]*8 + pos[1] - 1) for pos in positions_1]
 
         # Write output as string
-        output_str = f'Total changes:\n'
+        output_str = f''
         for pos in sorted(hex_positions_0 + hex_positions_1, key=lambda x: x[2]):
             if pos in hex_positions_0:
                 if pos[0]//8 == 35:
-                    output_str += f'[{(pos[0]//8)} / {pos[0]}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    output_str += f'[{(pos[0]//8)} / {pos[0]}, "{lines1[pos[0]-1][pos[1]-8:pos[1]]}" , "{lines2[pos[0]-1][pos[1]-8:pos[1]]}"]\n'
                 else:
-                    output_str += f'[{(pos[0]//8)+ 1} / {pos[0]}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    output_str += f'[{(pos[0]//8)+ 1} / {pos[0]}, "{lines1[pos[0]-1][pos[1]-8:pos[1]]}" , "{lines2[pos[0]-1][pos[1]-8:pos[1]]}"]\n'
             elif pos in hex_positions_1:
                 if pos[0]//8 == 35:
-                    output_str += f'[{(pos[0]//8)} / {pos[0]}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    output_str += f'[{(pos[0]//8)} / {pos[0]}, "{lines1[pos[0]-1][pos[1]-8:pos[1]]}" , "{lines2[pos[0]-1][pos[1]-8:pos[1]]}"]\n'
                 else:
-                    output_str += f'[{(pos[0]//8)+ 1} / {pos[0]}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    output_str += f'[{(pos[0]//8)+ 1} / {pos[0]}, "{lines1[pos[0]-1][pos[1]-8:pos[1]]}" , "{lines2[pos[0]-1][pos[1]-8:pos[1]]}"]\n'
         return output_str
 
 # Loop through each section in the config file
