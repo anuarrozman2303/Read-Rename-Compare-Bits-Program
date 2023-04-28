@@ -1,0 +1,11 @@
+hlourveon.txt vs hlourveoff.txt:
+Total changes:
+[26, "1" , SetTo 0]
+[26, "1" , SetTo 0]
+[26, "1" , SetTo 0]
+[26, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+

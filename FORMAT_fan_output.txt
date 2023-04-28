@@ -1,0 +1,40 @@
+speed1.txt vs speed2.txt:
+Total changes:
+[25, "1" , SetTo 0]
+[25, "1" , SetTo 0]
+[25, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+[35, "0" , SetTo 1]
+
+speed1.txt vs speed3.txt:
+Total changes:
+[25, "1" , SetTo 0]
+[25, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+
+speed1.txt vs speed4.txt:
+Total changes:
+[25, "1" , SetTo 0]
+[25, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+
+speed1.txt vs speed5.txt:
+Total changes:
+[25, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+
+speed1.txt vs auto.txt:
+Total changes:
+[25, "1" , SetTo 0]
+[26, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+
+speed1.txt vs night.txt:
+Total changes:
+[26, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+

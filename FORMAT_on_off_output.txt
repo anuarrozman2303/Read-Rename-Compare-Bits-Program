@@ -1,0 +1,9 @@
+on.txt vs off.txt:
+Total changes:
+[22, "1" , SetTo 0]
+[35, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+

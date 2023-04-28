@@ -1,0 +1,22 @@
+cool.txt vs fan.txt:
+Total changes:
+[22, "1" , SetTo 0]
+[22, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+[35, "1" , SetTo 0]
+[35, "0" , SetTo 1]
+
+cool.txt vs dry.txt:
+Total changes:
+[22, "1" , SetTo 0]
+[23, "1" , SetTo 0]
+[23, "1" , SetTo 0]
+[23, "1" , SetTo 0]
+[23, "0" , SetTo 1]
+[24, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+[35, "1" , SetTo 0]
+[35, "0" , SetTo 1]
+

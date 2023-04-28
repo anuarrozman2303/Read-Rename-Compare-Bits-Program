@@ -1,9 +1,9 @@
 on.txt vs off.txt:
 Total changes:
-169, "1", SetTo "0"
-273, "0", SetTo "1"
-274, "0", SetTo "1"
-275, "0", SetTo "1"
-276, "0", SetTo "1"
-277, "1", SetTo "0"
+Address: 22, Bit Pos: 169, "1" , SetTo "0"
+Address: 35, Bit Pos: 273, "0" , SetTo "1"
+Address: 35, Bit Pos: 274, "0" , SetTo "1"
+Address: 35, Bit Pos: 275, "0" , SetTo "1"
+Address: 35, Bit Pos: 276, "0" , SetTo "1"
+Address: 35, Bit Pos: 277, "1" , SetTo "0"
 

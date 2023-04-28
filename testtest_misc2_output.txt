@@ -1,0 +1,4 @@
+comfort_off.txt vs comfort_on.txt:
+Total changes:
+5, 53, "0", SetTo "1"
+

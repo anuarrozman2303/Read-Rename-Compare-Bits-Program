@@ -1,0 +1,9 @@
+vlourveon.txt vs vlourveoff.txt:
+Total changes:
+193, "1", SetTo "0"
+194, "1", SetTo "0"
+195, "1", SetTo "0"
+196, "1", SetTo "0"
+273, "0", SetTo "1"
+277, "1", SetTo "0"
+

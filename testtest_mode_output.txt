@@ -1,0 +1,10 @@
+cool.txt vs fan.txt:
+Total changes:
+4, 173, "1", SetTo "0"
+3, 175, "0", SetTo "1"
+
+cool.txt vs dry.txt:
+Total changes:
+6, 173, "1", SetTo "0"
+7, 183, "0", SetTo "1"
+

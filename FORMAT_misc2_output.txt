@@ -1,0 +1,7 @@
+comfort_off.txt vs comfort_on.txt:
+Total changes:
+[7, "0" , SetTo 1]
+[8, "0" , SetTo 1]
+[33, "0" , SetTo 1]
+[35, "0" , SetTo 1]
+

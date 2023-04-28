@@ -1,7 +1,7 @@
 comfort_off.txt vs comfort_on.txt:
 Total changes:
-53, "0", SetTo "1"
-61, "0", SetTo "1"
-258, "0", SetTo "1"
-274, "0", SetTo "1"
+Address: 7, Bit Pos: 53, "0" , SetTo "1"
+Address: 8, Bit Pos: 61, "0" , SetTo "1"
+Address: 33, Bit Pos: 258, "0" , SetTo "1"
+Address: 35, Bit Pos: 274, "0" , SetTo "1"
 
