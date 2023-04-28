@@ -6,7 +6,7 @@ import configparser
 import os
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('configsample.ini')
 
 # Create a new directory for the output files
 output_dir = 'output'

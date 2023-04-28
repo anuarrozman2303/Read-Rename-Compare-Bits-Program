@@ -4,11 +4,7 @@ import os
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
-# Create a new directory for the output files
-output_dir = 'output'
-os.makedirs(output_dir, exist_ok=True)
-
-def process_files(file1, file2, output_file):
+def process_files(file1, file2):
     with open(file1, 'r') as f1, open(file2, 'r') as f2:
         lines1 = f1.readlines()
         lines2 = f2.readlines()
@@ -33,45 +29,65 @@ def process_files(file1, file2, output_file):
         # Iterate through each line and count 0's and 1's and their positions
         for i in range(min(len(lines1), len(lines2))):
             if lines1[i] != lines2[i]:
+                count_0_line, count_1_line = 0, 0
+                start_pos_0, start_pos_1 = -1, -1
                 for j in range(min(len(lines1[i]), len(lines2[i]))):
                     if lines1[i][j] != lines2[i][j]:
                         if lines1[i][j] == '0':
-                            count_0 += 1
-                            positions_0.append((i+1, j+1))
+                            count_0_line += 1
+                            if start_pos_0 == -1:
+                                start_pos_0 = j
                         elif lines1[i][j] == '1':
-                            count_1 += 1
-                            positions_1.append((i+1, j+1))
+                            count_1_line += 1
+                            if start_pos_1 == -1:
+                                start_pos_1 = j
+                        if count_0_line > 8:
+                            positions_0.append((i+1, start_pos_0, j-1))
+                            start_pos_0 = j
+                            count_0_line = 1
+                        if count_1_line > 8:
+                            positions_1.append((i+1, start_pos_1, j-1))
+                            start_pos_1 = j
+                            count_1_line = 1
+                if count_0_line > 0:
+                    positions_0.append((i+1, start_pos_0, len(lines1[i])-1))
+                if count_1_line > 0:
+                    positions_1.append((i+1, start_pos_1, len(lines1[i])-1))
 
         # Sort positions in ascending order
         positions_0 = sorted(positions_0)
         positions_1 = sorted(positions_1)
 
-        # Write output file with counts and positions
-        with open(output_file, 'w') as output:
-            output.write(f'Total changes:\n')
-            for pos in sorted(positions_0 + positions_1):
-                if pos in positions_0:
-                    output.write(f'{pos}, "0", SetTo "1"\n')
-                elif pos in positions_1:
-                    output.write(f'{pos}, "1", SetTo "0"\n')
+        # Calculate hex values for positions
+        hex_positions_0 = [(pos[0], pos[1], pos[0]*8 + pos[1] - 1) for pos in positions_0]
+        hex_positions_1 = [(pos[0], pos[1], pos[0]*8 + pos[1] - 1) for pos in positions_1]
 
-
-def process_section(section, section_items, output_dir):
-    section_dir = os.path.join(output_dir, section)
-    os.makedirs(section_dir, exist_ok=True)
-    first_file = section_items[0][1]
-    for item in section_items[1:]:
-        current_file = item[1]
-        output_file = os.path.join(section_dir, f"{first_file}_vs_{current_file}.txt")
-        process_files(first_file, current_file, output_file)
-
-# Create output folder if it doesn't exist
-output_dir = "outputtest"
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+        # Write output as string
+        output_str = f'Total changes:\n'
+        for pos in sorted(hex_positions_0 + hex_positions_1, key=lambda x: x[2]):
+            if pos in hex_positions_0:
+                if pos[0]//8 != 35:
+                    output_str += f'[{(pos[0]-1)//8 + 1} / {pos[0]-1}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}, <{pos[0]:08b}> , <{pos[1]:08b}> ]\n'
+                else:
+                    output_str += f'[{pos[0]//8} / {pos[0]}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}, <{pos[0]:08b}> , <{pos[1]:08b}> ]\n'
+            elif pos in hex_positions_1:
+                if pos[0]//8 != 35:
+                    output_str += f'[{(pos[0]-1)//8 + 1} / {pos[0]-1}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}, <{pos[0]:08b}> , <{pos[1]:08b}> ]\n'
+                else:
+                    output_str += f'[{pos[0]//8} / {pos[0]}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}, <{pos[0]:08b}> , <{pos[1]:08b}> ]\n'
+        return output_str
 
 # Loop through each section in the config file
 for section in config.sections():
-    section_items = list(config.items(section))
     if section in ['on_off', 'temp', 'mode', 'fan', 'vlourve', 'hlourve', 'misc1', 'misc2']:
-        process_section(section, section_items, output_dir)
+        section_output_str = ''
+        section_items = list(config.items(section))
+        first_file = section_items[0][1]
+        for item in section_items[1:]:
+            current_file = item[1]
+            output_str = process_files(first_file, current_file)
+            section_output_str += f'{first_file} vs {current_file}:\n{output_str}\n'
+        # Write output to file
+        output_file = f'TESTFORMAT_{section}_output.txt'
+        with open(output_file, 'w') as f:
+            f.write(section_output_str)

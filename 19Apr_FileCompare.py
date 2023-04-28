@@ -2,10 +2,10 @@ import configparser
 import os
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('configsample.ini')
 
 # Create a new directory for the output files
-output_dir = 'output'
+output_dir = 'output111'
 os.makedirs(output_dir, exist_ok=True)
 
 def process_files(file1, file2, output_file):

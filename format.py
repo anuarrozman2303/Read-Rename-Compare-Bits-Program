@@ -51,14 +51,18 @@ def process_files(file1, file2):
         for pos in sorted(hex_positions_0 + hex_positions_1, key=lambda x: x[2]):
             if pos in hex_positions_0:
                 if pos[0]//8 == 35:
-                    output_str += f'[{(pos[0]//8)}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    line_num = pos[0]
                 else:
-                    output_str += f'[{(pos[0]//8)+ 1}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    line_num = pos[0] + 1
+                substring = lines2[pos[0]-1][max(0,pos[1]-9):pos[1]]
+                output_str += f'[{line_num} / {pos[0]}, "0" , SetTo {lines2[pos[0]-1][pos[1]-1]}, BitBefore {substring}, BitAfter {lines1[pos[0]-1][pos[1]-1]}]\n'
             elif pos in hex_positions_1:
                 if pos[0]//8 == 35:
-                    output_str += f'[{(pos[0]//8)}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    line_num = pos[0]
                 else:
-                    output_str += f'[{(pos[0]//8)+ 1}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    line_num = pos[0] + 1
+                substring = lines2[pos[0]-1][max(0,pos[1]-9):pos[1]]
+                output_str += f'[{line_num} / {pos[0]}, "1" , SetTo {lines2[pos[0]-1][pos[1]-1]}, BitBefore {substring}, BitAfter {lines1[pos[0]-1][pos[1]-1]}]\n'
         return output_str
 
 # Loop through each section in the config file

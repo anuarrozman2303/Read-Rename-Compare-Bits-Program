@@ -7,11 +7,11 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('configsample.ini')
 
 # Loop through each section in the config file
 for section in config.sections():
-    if section in ['on_off', 'temp', 'mode', 'fanspeed', 'vlourve', 'hlourve', 'special', 'comfort']:
+    if section in ['on_off', 'temp', 'mode', 'fan', 'vlourve', 'hlourve', 'misc1', 'misc2']:
         section_items = list(config.items(section))
         output_path = os.path.join(output_dir, f"{section}.txt")
         # Open the output file for writing
