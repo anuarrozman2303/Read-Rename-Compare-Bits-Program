@@ -1,9 +1,0 @@
-vlourveon.txt vs vlourveoff.txt:
-Total changes:
-Address: 25, Bit Pos: 193, "1" , SetTo "0"
-Address: 25, Bit Pos: 194, "1" , SetTo "0"
-Address: 25, Bit Pos: 195, "1" , SetTo "0"
-Address: 25, Bit Pos: 196, "1" , SetTo "0"
-Address: 35, Bit Pos: 273, "0" , SetTo "1"
-Address: 35, Bit Pos: 277, "1" , SetTo "0"
-

@@ -1,5 +1,0 @@
-on.txt vs off.txt:
-Total changes:
-3, 169, "1", SetTo "0"
-5, 273, "0", SetTo "1"
-

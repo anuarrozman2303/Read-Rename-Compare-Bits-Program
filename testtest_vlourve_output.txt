@@ -1,5 +1,0 @@
-vlourveon.txt vs vlourveoff.txt:
-Total changes:
-6, 193, "1", SetTo "0"
-2, 273, "0", SetTo "1"
-

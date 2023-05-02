@@ -1,0 +1,20 @@
+misc1_1 vs misc1_2:
+["33","258",SetTo 0], ["33","258",SetTo 1]
+
+misc1_1 vs misc1_3:
+["30","237",SetTo 0], ["30","237",SetTo 1]
+
+misc1_1 vs misc1_4:
+["30","237",SetTo 0], ["30","237",SetTo 1]
+["33","258",SetTo 0], ["33","258",SetTo 1]
+
+misc1_2 vs misc1_3:
+["30","237",SetTo 0], ["30","237",SetTo 1]
+["33","258",SetTo 0], ["33","258",SetTo 0]
+
+misc1_2 vs misc1_4:
+["30","237",SetTo 0], ["30","237",SetTo 1]
+
+misc1_3 vs misc1_4:
+["33","258",SetTo 0], ["33","258",SetTo 1]
+

@@ -29,30 +29,14 @@ def process_files(file1, file2):
         # Iterate through each line and count 0's and 1's and their positions
         for i in range(min(len(lines1), len(lines2))):
             if lines1[i] != lines2[i]:
-                count_0_line, count_1_line = 0, 0
-                start_pos_0, start_pos_1 = -1, -1
                 for j in range(min(len(lines1[i]), len(lines2[i]))):
                     if lines1[i][j] != lines2[i][j]:
                         if lines1[i][j] == '0':
-                            count_0_line += 1
-                            if start_pos_0 == -1:
-                                start_pos_0 = j
+                            count_0 += 1
+                            positions_0.append((i+1, j+1))
                         elif lines1[i][j] == '1':
-                            count_1_line += 1
-                            if start_pos_1 == -1:
-                                start_pos_1 = j
-                        if count_0_line > 8:
-                            positions_0.append((i+1, start_pos_0, j-1))
-                            start_pos_0 = j
-                            count_0_line = 1
-                        if count_1_line > 8:
-                            positions_1.append((i+1, start_pos_1, j-1))
-                            start_pos_1 = j
-                            count_1_line = 1
-                if count_0_line > 0:
-                    positions_0.append((i+1, start_pos_0, len(lines1[i])-1))
-                if count_1_line > 0:
-                    positions_1.append((i+1, start_pos_1, len(lines1[i])-1))
+                            count_1 += 1
+                            positions_1.append((i+1, j+1))
 
         # Sort positions in ascending order
         positions_0 = sorted(positions_0)
@@ -63,19 +47,13 @@ def process_files(file1, file2):
         hex_positions_1 = [(pos[0], pos[1], pos[0]*8 + pos[1] - 1) for pos in positions_1]
 
         # Write output as string
-        output_str = f'Total changes:\n'
+        # Write output as string
+        output_str = f''
         for pos in sorted(hex_positions_0 + hex_positions_1, key=lambda x: x[2]):
-            if pos in hex_positions_0:
-                if pos[0]//8 != 35:
-                    ## [hex_pos,bit_pos,setto0],[hex_pos,bit_pos,settoValue]
-                    ## ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]
+            if (((pos[0]-1)//8 + 1) != 8) and (((pos[0]-1)//8 + 1) != 16) and (((pos[0]-1)//8 + 1) != 35):
+                if pos in hex_positions_0:
                     output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-                else:
-                    output_str += f'["{(pos[0]-1)//8}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-            elif pos in hex_positions_1:
-                if pos[0]//8 != 35:
-                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-                else:
+                elif pos in hex_positions_1:
                     output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
         return output_str
 
@@ -84,12 +62,13 @@ for section in config.sections():
     if section in ['on_off', 'temp', 'mode', 'fan', 'vlourve', 'hlourve', 'misc1', 'misc2']:
         section_output_str = ''
         section_items = list(config.items(section))
-        first_file = section_items[0][1]
-        for item in section_items[1:]:
-            current_file = item[1]
-            output_str = process_files(first_file, current_file)
-            section_output_str += f'{first_file} vs {current_file}:\n{output_str}\n'
+        for i, (item1, file1) in enumerate(section_items):
+            for item2, file2 in section_items[i+1:]:
+                if not os.path.isfile(file1) or not os.path.isfile(file2):
+                    continue
+                output_str = process_files(file1, file2)
+                section_output_str += f'{item1} vs {item2}:\n{output_str}\n'
         # Write output to file
-        output_file = f'BinaryFormat_{section}_output.txt'
+        output_file = f'2May_Output{section}.txt'
         with open(output_file, 'w') as f:
             f.write(section_output_str)
