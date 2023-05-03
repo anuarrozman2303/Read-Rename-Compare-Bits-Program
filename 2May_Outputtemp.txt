@@ -1,3 +1,65 @@
+temp_0 vs temp18:
+
+temp_0 vs temp19:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+
+temp_0 vs temp20:
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","179",SetTo 0], ["23","179",SetTo 1]
+
+temp_0 vs temp21:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","179",SetTo 0], ["23","179",SetTo 1]
+
+temp_0 vs temp22:
+["23","179",SetTo 0], ["23","179",SetTo 1]
+
+temp_0 vs temp23:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+["23","179",SetTo 0], ["23","179",SetTo 1]
+
+temp_0 vs temp24:
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp25:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp26:
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp27:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp28:
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","179",SetTo 0], ["23","179",SetTo 1]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp29:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","179",SetTo 0], ["23","179",SetTo 1]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp30:
+["23","179",SetTo 0], ["23","179",SetTo 1]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp31:
+["23","177",SetTo 0], ["23","177",SetTo 1]
+["23","179",SetTo 0], ["23","179",SetTo 1]
+["23","180",SetTo 0], ["23","180",SetTo 1]
+
+temp_0 vs temp32:
+["23","178",SetTo 0], ["23","178",SetTo 0]
+["23","181",SetTo 0], ["23","181",SetTo 0]
+["23","182",SetTo 0], ["23","182",SetTo 1]
+
 temp18 vs temp19:
 ["23","178",SetTo 0], ["23","178",SetTo 1]
 
