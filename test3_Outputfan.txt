@@ -1,0 +1,84 @@
+fan_1 vs fan_2:
+[25, "197", SetTo 0, ["197","1",SetTo 0], "198", SetTo 0, ["198","1",SetTo 0], "199", SetTo 0, ["199","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "278", SetTo 0, ["278","1",SetTo 1]]
+
+fan_1 vs fan_3:
+[25, "198", SetTo 0, ["198","1",SetTo 0], "199", SetTo 0, ["199","1",SetTo 1]]
+[35, "278", SetTo 0, ["278","1",SetTo 1]]
+
+fan_1 vs fan_4:
+[25, "197", SetTo 0, ["197","1",SetTo 0], "199", SetTo 0, ["199","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_1 vs fan_5:
+[25, "199", SetTo 0, ["199","1",SetTo 1]]
+[35, "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_1 vs fan_6:
+[25, "197", SetTo 0, ["197","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_1 vs fan_7:
+[25, "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_2 vs fan_3:
+[25, "197", SetTo 0, ["197","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 1]]
+
+fan_2 vs fan_4:
+[25, "198", SetTo 0, ["198","1",SetTo 1]]
+[35, "278", SetTo 0, ["278","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_2 vs fan_5:
+[25, "197", SetTo 0, ["197","1",SetTo 1], "198", SetTo 0, ["198","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 1], "278", SetTo 0, ["278","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_2 vs fan_6:
+[25, "198", SetTo 0, ["198","1",SetTo 1], "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "278", SetTo 0, ["278","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_2 vs fan_7:
+[25, "197", SetTo 0, ["197","1",SetTo 1], "198", SetTo 0, ["198","1",SetTo 1], "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 1], "278", SetTo 0, ["278","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_3 vs fan_4:
+[25, "197", SetTo 0, ["197","1",SetTo 0], "198", SetTo 0, ["198","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "278", SetTo 0, ["278","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_3 vs fan_5:
+[25, "198", SetTo 0, ["198","1",SetTo 1]]
+[35, "278", SetTo 0, ["278","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_3 vs fan_6:
+[25, "197", SetTo 0, ["197","1",SetTo 0], "198", SetTo 0, ["198","1",SetTo 1], "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "278", SetTo 0, ["278","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_3 vs fan_7:
+[25, "198", SetTo 0, ["198","1",SetTo 1], "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "278", SetTo 0, ["278","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 0]]
+
+fan_4 vs fan_5:
+[25, "197", SetTo 0, ["197","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 1]]
+
+fan_4 vs fan_6:
+[25, "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "279", SetTo 0, ["279","1",SetTo 1]]
+
+fan_4 vs fan_7:
+[25, "197", SetTo 0, ["197","1",SetTo 1], "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 1], "279", SetTo 0, ["279","1",SetTo 1]]
+
+fan_5 vs fan_6:
+[25, "197", SetTo 0, ["197","1",SetTo 0], "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 1]]
+
+fan_5 vs fan_7:
+[25, "199", SetTo 0, ["199","1",SetTo 0], "200", SetTo 0, ["200","1",SetTo 1]]
+[35, "279", SetTo 0, ["279","1",SetTo 1]]
+
+fan_6 vs fan_7:
+[25, "197", SetTo 0, ["197","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 1]]
+

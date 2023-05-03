@@ -52,9 +52,9 @@ def process_files(file1, file2):
         for pos in sorted(hex_positions_0 + hex_positions_1, key=lambda x: x[2]):
             if (((pos[0]-1)//8 + 1) != 8) and (((pos[0]-1)//8 + 1) != 16) and (((pos[0]-1)//8 + 1) != 35):
                 if pos in hex_positions_0:
-                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
                 elif pos in hex_positions_1:
-                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
+                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
         return output_str
 
 # Loop through each section in the config file

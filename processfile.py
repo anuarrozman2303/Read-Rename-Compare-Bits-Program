@@ -1,42 +1,32 @@
+import configparser
 import os
 
 def process_file(filename):
-    # Open the input file for reading
-    with open(filename, 'r') as infile:
-        # Read in all the lines of the file
-        lines = infile.readlines()
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+        # Filter process
+        for i in range(len(lines)):
+            lines[i] = lines[i].split(':', 1)[-1]
+            lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
+            lines[i] = lines[i].replace(':', '', 1)
+        # Remove empty lines & move up the data.
+        lines = [line.strip() for line in lines if line.strip()]
+        return ''.join(lines)
 
-    # Remove everything before the colon, remove all non-numeric characters, and remove empty lines
-    lines = [line.split(':', 1)[-1] for line in lines]
-    lines = [''.join(c for c in line if c in ['0', '1']) for line in lines]
-    lines = [line.strip() for line in lines if line.strip()]
+config = configparser.ConfigParser()
+config.read('configsample.ini')
 
-    ## not working
-    # Replace lines 104-111, 168-175, and 176-183 with "0" if filename is "mode_default.txt"
-    if os.path.basename(filename) == "mode_default.txt":
-        lines[103:111] = ["0"] * 8
-        lines[167:175] = ["0"] * 8
-        lines[175:183] = ["0"] * 8
+for section in config.sections():
+    for item, filename in config.items(section):
+        if not os.path.isfile(filename):
+            continue
+        output_str = process_file(filename)
+        print
+        print(len(process_file(filename)))  # Check file length, = 280 
+        output_filename = f'Processed_{os.path.splitext(filename)[0]}.txt'
+        with open(output_filename, 'w') as f:
+            f.write(output_str)
 
-    # Replace lines 168-175 with "0" if filename is "default.txt"
-    elif os.path.basename(filename) == "default.txt":
-        lines[167:175] = ["0"] * 8
-
-    # Replace lines 176-183 with "0" if filename is "temp_default.txt"
-    elif os.path.basename(filename) == "temp_default.txt":
-        lines[175:183] = ["0"] * 8
-
-    # Create the output filename
-    outfilename = 'Process_' + os.path.basename(filename)
-
-    # Open the output file for writing
-    with open(outfilename, 'w') as outfile:
-        # Write the processed lines to the output file
-        for line in lines:
-            outfile.write(line + '\n')
-
-    print(f"Processed data written to {outfilename}.")
-
-if __name__ == '__main__':
-    filename = input("Enter the name of the file to process: ")
-    process_file(filename)
+## Continue Here
+## Done Process Files to 1 & 0 into horizontal lists
+## --- Read processed files to do comparison.

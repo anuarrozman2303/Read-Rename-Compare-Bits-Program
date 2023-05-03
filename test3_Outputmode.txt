@@ -1,0 +1,14 @@
+mode_1 vs mode_2:
+[22, "173", SetTo 0, ["173","1",SetTo 0], "175", SetTo 0, ["175","1",SetTo 1]]
+[35, "277", SetTo 0, ["277","1",SetTo 0], "279", SetTo 0, ["279","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 1]]
+
+mode_1 vs mode_3:
+[22, "173", SetTo 0, ["173","1",SetTo 0]]
+[23, "178", SetTo 0, ["178","1",SetTo 0], "181", SetTo 0, ["181","1",SetTo 0], "182", SetTo 0, ["182","1",SetTo 0], "183", SetTo 0, ["183","1",SetTo 1], "184", SetTo 0, ["184","1",SetTo 1]]
+[35, "274", SetTo 0, ["274","1",SetTo 1], "275", SetTo 0, ["275","1",SetTo 1], "276", SetTo 0, ["276","1",SetTo 1], "277", SetTo 0, ["277","1",SetTo 0], "280", SetTo 0, ["280","1",SetTo 1]]
+
+mode_2 vs mode_3:
+[22, "175", SetTo 0, ["175","1",SetTo 0]]
+[23, "178", SetTo 0, ["178","1",SetTo 0], "181", SetTo 0, ["181","1",SetTo 0], "182", SetTo 0, ["182","1",SetTo 0], "183", SetTo 0, ["183","1",SetTo 1], "184", SetTo 0, ["184","1",SetTo 1]]
+[35, "274", SetTo 0, ["274","1",SetTo 1], "275", SetTo 0, ["275","1",SetTo 1], "276", SetTo 0, ["276","1",SetTo 1], "279", SetTo 0, ["279","1",SetTo 1]]
+
