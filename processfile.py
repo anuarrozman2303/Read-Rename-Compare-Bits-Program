@@ -21,11 +21,12 @@ for section in config.sections():
         if not os.path.isfile(filename):
             continue
         output_str = process_file(filename)
-        print
-        print(len(process_file(filename)))  # Check file length, = 280 
+        print(f"Length of {filename}: {len(output_str)}")  # Check file length
+        print(f"Number of 8-character chunks in {filename}: {len(output_str)//8}") # Count 8-character chunks
         output_filename = f'Processed_{os.path.splitext(filename)[0]}.txt'
         with open(output_filename, 'w') as f:
             f.write(output_str)
+
 
 ## Continue Here
 ## Done Process Files to 1 & 0 into horizontal lists
