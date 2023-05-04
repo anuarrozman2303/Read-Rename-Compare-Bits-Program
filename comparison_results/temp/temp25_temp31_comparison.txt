@@ -1,0 +1,5 @@
+temp25 and temp31 differ:
+Line 179: 0 != 1
+Line 180: 0 != 1
+Line 275: 0 != 1
+Line 276: 0 != 1

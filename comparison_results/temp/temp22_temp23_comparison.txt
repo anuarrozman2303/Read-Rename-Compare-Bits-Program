@@ -1,0 +1,4 @@
+temp22 and temp23 differ:
+Line 178: 0 != 1
+Line 274: 1 != 0
+Line 275: 0 != 1

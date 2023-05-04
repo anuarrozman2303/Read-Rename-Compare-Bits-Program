@@ -1,0 +1,5 @@
+misc1_2 and misc1_3 differ:
+Line 238: 0 != 1
+Line 259: 1 != 0
+Line 275: 1 != 0
+Line 278: 0 != 1

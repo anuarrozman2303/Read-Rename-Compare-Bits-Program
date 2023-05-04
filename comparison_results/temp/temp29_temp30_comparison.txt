@@ -1,0 +1,4 @@
+temp29 and temp30 differ:
+Line 178: 1 != 0
+Line 179: 0 != 1
+Line 274: 0 != 1

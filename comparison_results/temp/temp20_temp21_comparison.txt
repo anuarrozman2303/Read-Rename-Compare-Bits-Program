@@ -1,0 +1,5 @@
+temp20 and temp21 differ:
+Line 178: 0 != 1
+Line 274: 1 != 0
+Line 275: 1 != 0
+Line 276: 0 != 1

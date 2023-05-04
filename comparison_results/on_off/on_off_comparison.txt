@@ -1,0 +1,7 @@
+on and off differ:
+Line 169: 1 != 0
+Line 273: 0 != 1
+Line 274: 0 != 1
+Line 275: 0 != 1
+Line 276: 0 != 1
+Line 277: 1 != 0

@@ -1,0 +1,4 @@
+fan_1 and fan_5 differ:
+Line 199: 0 != 1
+Line 279: 1 != 0
+Line 280: 1 != 0

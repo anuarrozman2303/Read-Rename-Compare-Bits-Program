@@ -1,0 +1,7 @@
+temp19 and temp29 differ:
+Line 179: 1 != 0
+Line 180: 0 != 1
+Line 181: 0 != 1
+Line 275: 1 != 0
+Line 276: 0 != 1
+Line 277: 0 != 1

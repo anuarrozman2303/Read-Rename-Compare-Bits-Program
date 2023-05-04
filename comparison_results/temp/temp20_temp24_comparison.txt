@@ -1,0 +1,4 @@
+temp20 and temp24 differ:
+Line 180: 1 != 0
+Line 181: 0 != 1
+Line 276: 0 != 1

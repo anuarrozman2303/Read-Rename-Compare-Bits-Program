@@ -1,0 +1,6 @@
+fan_2 and fan_6 differ:
+Line 198: 0 != 1
+Line 199: 1 != 0
+Line 200: 0 != 1
+Line 278: 1 != 0
+Line 280: 1 != 0

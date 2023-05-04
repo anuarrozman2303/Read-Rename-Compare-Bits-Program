@@ -1,0 +1,6 @@
+mode_1 and mode_2 differ:
+Line 173: 1 != 0
+Line 175: 0 != 1
+Line 277: 1 != 0
+Line 279: 1 != 0
+Line 280: 0 != 1

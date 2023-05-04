@@ -1,7 +1,8 @@
 import os
 import configparser
 
-def process_file(filename):
+
+def process_file(filename, start_pos=0, end_pos=8):
     with open(filename, 'r') as f:
         lines = f.readlines()
         # Filter process
@@ -9,9 +10,15 @@ def process_file(filename):
             lines[i] = lines[i].split(':', 1)[-1]
             lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
             lines[i] = lines[i].replace(':', '', 1)
+        # Group consecutive characters into one line
+        grouped_lines = []
+        for line in lines:
+            grouped_line = [line[i:i+end_pos] for i in range(start_pos, len(line), end_pos)]
+            grouped_lines.append(' '.join(grouped_line))
         # Remove empty lines & move up the data.
-        lines = [line.strip() for line in lines if line.strip()]
-        return lines
+        grouped_lines = [line.strip() for line in grouped_lines if line.strip()]
+        return grouped_lines
+
 
 def compare_files(file1, file2):
     content1 = process_file(file1)
@@ -58,6 +65,7 @@ for section in config.sections():
                 result_file = os.path.join(section_dir, f"{item1}_{item2}_comparison.txt")
                 with open(result_file, 'w') as f:
                     f.write(result)
+
 
 
  
