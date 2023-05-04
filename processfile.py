@@ -19,9 +19,7 @@ def compare_files(file1, file2):
     differences = []
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
-            differences.append(f"Line {i+1}: {line1.strip()} != {line2.strip()}")
-    if len(content1) != len(content2):
-        differences.append(f"Number of lines differ: {len(content1)} vs {len(content2)}")
+            differences.append(f"{i+1}: {line1.strip()} != {line2.strip()}")
     if not differences:
         return "Files are identical"
     else:

@@ -1,3 +1,3 @@
 temp23 and temp31 differ:
-Line 181: 0 != 1
-Line 277: 0 != 1
+181: 0 != 1
+277: 0 != 1
