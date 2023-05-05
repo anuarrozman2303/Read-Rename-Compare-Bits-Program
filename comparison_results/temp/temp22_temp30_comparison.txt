@@ -1,3 +1,0 @@
-temp22 and temp30 differ:
-181: 0 != 1
-277: 0 != 1

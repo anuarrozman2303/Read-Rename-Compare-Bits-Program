@@ -1,3 +1,0 @@
-temp18 and temp26 differ:
-181: 0 != 1
-277: 0 != 1

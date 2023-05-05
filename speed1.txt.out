@@ -1,0 +1,4268 @@
+
+[Comparison with speed2.txt]
+197: 1 != 0
+198: 1 != 0
+199: 0 != 1
+277: 1 != 0
+278: 0 != 1
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed3.txt]
+198: 1 != 0
+199: 0 != 1
+278: 0 != 1
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed4.txt]
+197: 1 != 0
+199: 0 != 1
+277: 1 != 0
+279: 1 != 0
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed5.txt]
+199: 0 != 1
+279: 1 != 0
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with auto.txt]
+197: 1 != 0
+200: 0 != 1
+277: 1 != 0
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with night.txt]
+200: 0 != 1
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed2.txt]
+197: 1 != 0
+198: 1 != 0
+199: 0 != 1
+277: 1 != 0
+278: 0 != 1
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed3.txt]
+198: 1 != 0
+199: 0 != 1
+278: 0 != 1
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed4.txt]
+197: 1 != 0
+199: 0 != 1
+277: 1 != 0
+279: 1 != 0
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with speed5.txt]
+199: 0 != 1
+279: 1 != 0
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with auto.txt]
+197: 1 != 0
+200: 0 != 1
+277: 1 != 0
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1
+
+[Comparison with night.txt]
+200: 0 != 1
+280: 1 != 0
+
+[Hex Position 1]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 2]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 3]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 4]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 5]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 6]
+0
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 7]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 8]
+1
+1
+1
+0
+0
+1
+1
+1
+
+[Hex Position 9]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 10]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 11]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 12]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 13]
+0
+1
+0
+0
+0
+0
+1
+0
+
+[Hex Position 14]
+1
+0
+0
+0
+1
+1
+1
+1
+
+[Hex Position 15]
+0
+0
+1
+1
+0
+1
+0
+0
+
+[Hex Position 16]
+1
+0
+0
+0
+1
+1
+1
+0
+
+[Hex Position 17]
+1
+0
+0
+0
+1
+0
+0
+0
+
+[Hex Position 18]
+0
+1
+0
+1
+1
+0
+1
+1
+
+[Hex Position 19]
+1
+1
+1
+0
+0
+1
+0
+0
+
+[Hex Position 20]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 21]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 22]
+0
+0
+0
+1
+1
+1
+0
+0
+
+[Hex Position 23]
+0
+1
+0
+0
+1
+1
+0
+0
+
+[Hex Position 24]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 25]
+0
+0
+0
+0
+1
+1
+0
+0
+
+[Hex Position 26]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 27]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 28]
+0
+1
+1
+0
+0
+0
+0
+0
+
+[Hex Position 29]
+0
+0
+0
+0
+0
+1
+1
+0
+
+[Hex Position 30]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 31]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 32]
+1
+0
+1
+0
+0
+0
+1
+1
+
+[Hex Position 33]
+0
+0
+0
+0
+0
+0
+0
+0
+
+[Hex Position 34]
+0
+0
+0
+1
+0
+0
+0
+0
+
+[Hex Position 35]
+1
+1
+1
+1
+1
+0
+1
+1

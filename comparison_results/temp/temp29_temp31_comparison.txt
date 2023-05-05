@@ -1,3 +1,0 @@
-temp29 and temp31 differ:
-179: 0 != 1
-275: 0 != 1

@@ -1,3 +1,0 @@
-temp26 and temp30 differ:
-180: 0 != 1
-276: 0 != 1
