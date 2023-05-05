@@ -27,18 +27,15 @@ def combine_hex_pos_differences(differences):
     for difference in differences:
         hex_pos = difference[0]
         if hex_pos not in hex_pos_dict:
-            hex_pos_dict[hex_pos] = set()
-        hex_pos_dict[hex_pos].update(difference[1:])
+            hex_pos_dict[hex_pos] = []
+        hex_pos_dict[hex_pos].extend(difference[1:])
     output = []
     for hex_pos, hex_pos_differences in hex_pos_dict.items():
-        if len(hex_pos_differences) == 1:
-            diff_str = str(hex_pos_differences.pop())
-        else:
-            diff_str = ','.join(str(d) for d in sorted(hex_pos_differences))
-        output.append(f"[{hex_pos}: {diff_str}]")
-    return output
+        combined_differences = ','.join(hex_pos_differences)
+        output.append(f"[{hex_pos}: {combined_differences}]")
+    return '\n'.join(output)
 
-def compare_files(file1, file2, differences_set):
+def compare_files(file1, file2):
     content1 = process_file(file1)
     content2 = process_file(file2)
     differences = []
@@ -49,8 +46,12 @@ def compare_files(file1, file2, differences_set):
                 continue
             diff_str = str(i+1)
             differences.append((hex_pos, diff_str))
-    if differences:
-        differences_set.update(differences)
+    if not differences:
+        return "Files are identical"
+    else:
+        combined_differences = combine_hex_pos_differences(differences)
+        return combined_differences
+
 
 config = configparser.ConfigParser()
 config.read('configsample.ini')
@@ -59,12 +60,7 @@ config.read('configsample.ini')
 if not os.path.exists('comparison_results'):
     os.makedirs('comparison_results')
 
-
-
-# Loop through each section in the config file
 for section in config.sections():
-    # Create a set to store all the unique differences
-    all_differences = set()
     section_results = []
     section_comparisons = []
     for item, filename in config.items(section):
@@ -73,15 +69,22 @@ for section in config.sections():
         section_results.append((item, filename))
     if len(section_results) > 1:
         # Compare the files in this section
+        section_dir = os.path.join('comparison_results', section)
+        if not os.path.exists(section_dir):
+            os.makedirs(section_dir)
         for i in range(len(section_results)):
             for j in range(i+1, len(section_results)):
                 item1, filename1 = section_results[i]
                 item2, filename2 = section_results[j]
-                compare_files(filename1, filename2, all_differences)
-
-    # Get the unique differences
-    unique_differences = combine_hex_pos_differences(all_differences)
-
-    print('\n'.join(unique_differences) + (section))
+                differences = compare_files(filename1, filename2)
+                if differences == "Files are identical":
+                    result = f"{item1} & {item2} are identical."
+                else:
+                    result = f"{item1} & {item2}: {differences}"
+                section_comparisons.append(result)
+        # Write the section-specific comparison results to a text file
+        result_file = os.path.join(section_dir, f"{section}_comparison.txt")
+        with open(result_file, 'w') as f:
+            f.write('\n'.join(section_comparisons))
 
 

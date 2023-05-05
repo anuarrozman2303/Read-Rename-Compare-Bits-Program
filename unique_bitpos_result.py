@@ -15,7 +15,7 @@ def process_file(filename):
         # Filter process
         for i in range(len(lines)):
             lines[i] = lines[i].split(':', 1)[-1]
-            lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
+            lines[i] = ''.join([c for c in lines[i] if not c.isalpha( )])
             lines[i] = lines[i].replace(':', '', 1)
         # Remove empty lines & move up the data.
         lines = [line.strip() for line in lines if line.strip()]

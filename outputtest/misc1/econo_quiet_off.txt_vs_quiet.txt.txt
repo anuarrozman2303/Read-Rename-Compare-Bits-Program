@@ -1,3 +1,0 @@
-Total changes:
-(238, 1), "0", SetTo "1"
-(278, 1), "0", SetTo "1"
