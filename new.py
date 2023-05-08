@@ -6,6 +6,10 @@
 ## <section_name>
 ## [<hex_pos>: <list_of_unique_bit_position>]
 
+
+## Continue separate by section output.
+## Fix bits print by 1 byte. (8bits)
+
 import os
 import configparser
 
@@ -59,9 +63,10 @@ def compare_files(file1, file2, differences_set):
             differences.append((hex_pos, diff_str))
     if differences:
         differences_set.update(differences)
-        print(f"Differences between {file1} and {file2}:")
-        for difference in differences:
-            print(f"  Hex position: {difference[0]}, Bit position: {difference[1]}")
+        with open("output.txt", "a") as output_file:
+            output_file.write(f"{file1} & {file2}:\n")
+            for difference in differences:
+                output_file.write(f"{difference[0]}, {difference[1]}\n")
 
 
 config = configparser.ConfigParser()
