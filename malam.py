@@ -34,15 +34,9 @@ def group_by_hex_pos(differences):
         hex_pos_dict[hex_pos].append(difference[1:])
     return hex_pos_dict
 
-def combine_hex_pos_differences(differences):
-    hex_pos_dict = {}
-    for difference in differences:
-        hex_pos = difference[0]
-        if hex_pos not in hex_pos_dict:
-            hex_pos_dict[hex_pos] = set()
-        hex_pos_dict[hex_pos].update(difference[1:])
+def combine_hex_pos_differences(differences_dict):
     output = []
-    for hex_pos, hex_pos_differences in hex_pos_dict.items():
+    for hex_pos, hex_pos_differences in differences_dict.items():
         if len(hex_pos_differences) == 1:
             diff_str = str(hex_pos_differences.pop())
         else:
@@ -50,24 +44,24 @@ def combine_hex_pos_differences(differences):
         output.append(f"[{hex_pos}: {diff_str}]")
     return output
 
-def compare_files(file1, file2, differences_set):
+
+def compare_files(file1, file2, differences_dict):
     content1 = process_file(file1)
     content2 = process_file(file2)
-    differences = []
+    differences = {}
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
             diff_str = str(i+1)
-            differences.append((hex_pos, diff_str))
-    if differences:
-        differences_set.update(differences)
-        with open("output.txt", "a") as output_file:
-            output_file.write(f"{section}\n")
-            for difference in differences:
-                output_file.write(f"{difference[0]}, {difference[1]}\n")
-
+            if hex_pos not in differences:
+                differences[hex_pos] = set()
+            differences[hex_pos].add(diff_str)
+    for hex_pos, hex_pos_differences in differences.items():
+        if hex_pos not in differences_dict:
+            differences_dict[hex_pos] = set()
+        differences_dict[hex_pos].update(hex_pos_differences)
 
 config = configparser.ConfigParser()
 config.read('configsample.ini')

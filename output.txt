@@ -1,468 +1,946 @@
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\on.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\off.txt:
+on_off
 22, 169
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt:
+temp
 23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt:
+temp
 23, 179
 23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt:
-23, 178
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt:
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt:
-23, 178
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt:
-23, 179
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
-23, 178
-23, 179
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
-23, 178
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 179
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
+temp
 23, 178
 23, 179
 23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
+temp
 23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
+temp
 23, 178
 23, 180
+temp
+23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp18.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 179
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt:
-23, 178
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt:
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt:
-23, 178
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt:
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt:
+temp
 23, 178
 23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
-23, 179
+temp
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
+temp
 23, 178
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
+temp
+23, 179
+23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
+temp
 23, 178
 23, 179
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 179
+temp
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
+temp
 23, 178
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp19.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 178
+temp
 23, 179
 23, 182
 23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt:
-23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt:
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt:
-23, 178
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt:
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
-23, 178
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
-23, 179
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
+temp
 23, 178
 23, 179
 23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
+temp
+23, 179
+23, 180
+temp
 23, 178
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
+23, 180
+temp
+23, 180
+temp
+23, 178
 23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+temp
+23, 178
+23, 179
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 179
+23, 181
+temp
 23, 178
 23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp20.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
+temp
 23, 180
 23, 182
 23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt:
+temp
 23, 178
 23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt:
+temp
 23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt:
-23, 178
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
-23, 178
-23, 179
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
-23, 179
-23, 180
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 178
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 178
-23, 179
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 179
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp21.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
+temp
 23, 178
 23, 180
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt:
-23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt:
-23, 179
+23, 181
+temp
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
+temp
 23, 178
 23, 179
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
+temp
+23, 179
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
+temp
 23, 178
-23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 179
+temp
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
+temp
 23, 178
 23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 178
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp22.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
+temp
 23, 179
+23, 181
+temp
+23, 178
 23, 180
 23, 182
 23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt:
+temp
+23, 178
+temp
+23, 179
+23, 180
+23, 181
+temp
 23, 178
 23, 179
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
-23, 179
+temp
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
+temp
 23, 178
 23, 180
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
-23, 180
+temp
+23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
+temp
 23, 178
 23, 179
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 179
+temp
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
+temp
 23, 178
 23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 181
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp23.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 178
+temp
 23, 179
 23, 180
 23, 182
 23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt:
+temp
 23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
-23, 178
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 178
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 178
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp24.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 181
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt:
-23, 178
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 178
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 178
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp25.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 178
-23, 181
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt:
-23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 178
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 178
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp26.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 179
-23, 181
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt:
-23, 178
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 179
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 178
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 180
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp27.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 178
-23, 179
-23, 181
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt:
-23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 178
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp28.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 180
-23, 181
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt:
-23, 178
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 179
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp29.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
-23, 178
-23, 180
-23, 181
-23, 182
-23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt:
-23, 178
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp30.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
 23, 179
 23, 180
 23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 179
+23, 180
 23, 182
 23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp31.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\temp32.txt:
+temp
 23, 178
+temp
+23, 179
+temp
+23, 178
+23, 179
+temp
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+temp
+23, 179
+temp
+23, 178
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 179
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 179
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+temp
+23, 178
+23, 179
+temp
+23, 180
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+temp
+23, 179
+temp
+23, 178
+23, 180
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+temp
 23, 179
 23, 180
 23, 181
 23, 182
 23, 183
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\cool.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\fan.txt:
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+23, 182
+23, 183
+mode
 22, 173
 22, 175
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\cool.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\dry.txt:
+mode
 22, 173
 23, 178
 23, 181
 23, 182
 23, 183
 23, 184
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\fan.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\dry.txt:
+mode
 22, 175
 23, 178
 23, 181
 23, 182
 23, 183
 23, 184
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed1.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed2.txt:
+fan
 25, 197
 25, 198
 25, 199
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed1.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed3.txt:
+fan
 25, 198
 25, 199
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed1.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed4.txt:
+fan
 25, 197
 25, 199
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed1.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed5.txt:
+fan
 25, 199
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed1.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\auto.txt:
+fan
 25, 197
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed1.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\night.txt:
+fan
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed2.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed3.txt:
+fan
 25, 197
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed2.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed4.txt:
+fan
 25, 198
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed2.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed5.txt:
+fan
 25, 197
 25, 198
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed2.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\auto.txt:
-25, 198
-25, 199
-25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed2.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\night.txt:
-25, 197
+fan
 25, 198
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed3.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed4.txt:
-25, 197
-25, 198
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed3.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed5.txt:
-25, 198
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed3.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\auto.txt:
+fan
 25, 197
 25, 198
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed3.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\night.txt:
+fan
+25, 197
+25, 198
+fan
+25, 198
+fan
+25, 197
 25, 198
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed4.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed5.txt:
-25, 197
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed4.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\auto.txt:
+fan
+25, 198
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed4.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\night.txt:
+fan
+25, 197
+fan
+25, 199
+25, 200
+fan
 25, 197
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed5.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\auto.txt:
+fan
 25, 197
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\speed5.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\night.txt:
+fan
 25, 199
 25, 200
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\auto.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\night.txt:
+fan
 25, 197
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\vlourveon.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\vlourveoff.txt:
+vlourve
 25, 193
 25, 194
 25, 195
 25, 196
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\hlourveon.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\hlourveoff.txt:
+hlourve
 26, 201
 26, 202
 26, 203
 26, 204
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo_quiet_off.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo.txt:
+misc1
 33, 259
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo_quiet_off.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\quiet.txt:
+misc1
 30, 238
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo_quiet_off.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo_quiet.txt:
-30, 238
-33, 259
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\quiet.txt:
+misc1
 30, 238
 33, 259
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo_quiet.txt:
+misc1
 30, 238
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\quiet.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\econo_quiet.txt:
 33, 259
-C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\comfort_off.txt & C:\GitHub\Read-Rename-Compare-Bits-Program\backup_export_ir\comfort_on.txt:
+misc1
+30, 238
+misc1
+33, 259
+misc2
+7, 53
+33, 258
+on_off
+22, 169
+on_off
+22, 169
+on_off
+22, 169
+on_off
+22, 169
+on_off
+22, 169
+on_off
+22, 169
+temp
+23, 178
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 179
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+temp
+23, 178
+23, 179
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 180
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+temp
+23, 179
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 180
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 179
+23, 180
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+temp
+23, 179
+23, 180
+23, 181
+temp
+23, 178
+23, 180
+23, 181
+temp
+23, 180
+23, 181
+temp
+23, 178
+23, 179
+23, 181
+temp
+23, 179
+23, 181
+temp
+23, 178
+23, 181
+temp
+23, 181
+temp
+23, 178
+23, 179
+23, 180
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+temp
+23, 178
+23, 179
+temp
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+temp
+23, 179
+temp
+23, 178
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 179
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+23, 180
+temp
+23, 179
+23, 180
+temp
+23, 178
+23, 180
+temp
+23, 180
+temp
+23, 178
+23, 179
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+temp
+23, 178
+23, 179
+temp
+23, 180
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+temp
+23, 179
+temp
+23, 178
+23, 180
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+temp
+23, 179
+23, 180
+23, 181
+23, 182
+23, 183
+temp
+23, 178
+23, 179
+23, 180
+23, 181
+23, 182
+23, 183
+mode
+22, 173
+22, 175
+mode
+22, 173
+23, 178
+23, 181
+23, 182
+23, 183
+23, 184
+mode
+22, 175
+23, 178
+23, 181
+23, 182
+23, 183
+23, 184
+fan
+25, 197
+25, 198
+25, 199
+fan
+25, 198
+25, 199
+fan
+25, 197
+25, 199
+fan
+25, 199
+fan
+25, 197
+25, 200
+fan
+25, 200
+fan
+25, 197
+fan
+25, 198
+fan
+25, 197
+25, 198
+fan
+25, 198
+25, 199
+25, 200
+fan
+25, 197
+25, 198
+25, 199
+25, 200
+fan
+25, 197
+25, 198
+fan
+25, 198
+fan
+25, 197
+25, 198
+25, 199
+25, 200
+fan
+25, 198
+25, 199
+25, 200
+fan
+25, 197
+fan
+25, 199
+25, 200
+fan
+25, 197
+25, 199
+25, 200
+fan
+25, 197
+25, 199
+25, 200
+fan
+25, 199
+25, 200
+fan
+25, 197
+vlourve
+25, 193
+25, 194
+25, 195
+25, 196
+hlourve
+26, 201
+26, 202
+26, 203
+26, 204
+misc1
+33, 259
+misc1
+30, 238
+misc1
+30, 238
+33, 259
+misc1
+30, 238
+33, 259
+misc1
+30, 238
+misc1
+33, 259
+misc2
 7, 53
 33, 258
