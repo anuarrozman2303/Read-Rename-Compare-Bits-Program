@@ -56,17 +56,20 @@ def compare_files(file1, file2, differences_set):
             if hex_pos in [8, 16, 35]:
                 continue
             diff_str = str(i+1)
-            differences.append(f"[{hex_pos}: {diff_str}]")
-            differences_set.add((hex_pos, diff_str))
-    return differences
+            differences.append((hex_pos, diff_str))
+    if differences:
+        differences_set.update(differences)
+        print(f"Differences between {file1} and {file2}:")
+        for difference in differences:
+            print(f"  Hex position: {difference[0]}, Bit position: {difference[1]}")
 
 
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
 # Create a new directory to hold the comparison results
-if not os.path.exists('BytesDisplay'):
-    os.makedirs('BytesDisplay')
+if not os.path.exists('Unique_BitPos'):
+    os.makedirs('Unique_BitPos')
 
 # Loop through each section in the config file
 for section in config.sections():
@@ -90,21 +93,10 @@ for section in config.sections():
     unique_differences = combine_hex_pos_differences(all_differences)
 
     # Write the output to a text file
-    output_file = os.path.join('BytesDisplay', f"{section}.txt")
+    output_file = os.path.join('Unique_BitPos', f"{section}.txt")
     with open(output_file, 'w') as f:
-        f.write("Unique " + '\n'.join(unique_differences))
+        f.write('\n'.join(unique_differences))
 
-    # Write the comparison results to a file
-    comparison_output_file = os.path.join('BytesDisplay', f"{section}_comparison.txt")
-    # Write the comparison results to the system file
-    comparison_output_file = os.path.join('BytesDisplay', f"{section}_comparison.txt")
-    with open(comparison_output_file, 'w') as f:
-        for item1, item2, diff_lines in section_comparisons:
-            f.write(f"Comparison between {item1} and {item2}:\n")
-            if diff_lines:
-                f.write('\n'.join(diff_lines))
-            else:
-                f.write("No differences found.\n")
-            f.write("\n")
+
 
 

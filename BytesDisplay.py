@@ -1,3 +1,11 @@
+## This code will process the export files from PulseView.
+## The process files will be sort based on sections in the config file.
+## Then the files for key-value in section will be compared.
+## The difference data locations will be printed out as [<hex_pos>: <bit_positions>]
+## The unique <bit_positions> in each sections will be printed out in the terminal.
+## <section_name>
+## [<hex_pos>: <list_of_unique_bit_position>]
+
 import os
 import configparser
 
@@ -7,7 +15,7 @@ def process_file(filename):
         # Filter process
         for i in range(len(lines)):
             lines[i] = lines[i].split(':', 1)[-1]
-            lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
+            lines[i] = ''.join([c for c in lines[i] if not c.isalpha( )])
             lines[i] = lines[i].replace(':', '', 1)
         # Remove empty lines & move up the data.
         lines = [line.strip() for line in lines if line.strip()]
@@ -27,15 +35,18 @@ def combine_hex_pos_differences(differences):
     for difference in differences:
         hex_pos = difference[0]
         if hex_pos not in hex_pos_dict:
-            hex_pos_dict[hex_pos] = []
-        hex_pos_dict[hex_pos].extend(difference[1:])
+            hex_pos_dict[hex_pos] = set()
+        hex_pos_dict[hex_pos].update(difference[1:])
     output = []
     for hex_pos, hex_pos_differences in hex_pos_dict.items():
-        combined_differences = ','.join(hex_pos_differences)
-        output.append(f"[{hex_pos}: {combined_differences}]")
-    return '\n'.join(output)
+        if len(hex_pos_differences) == 1:
+            diff_str = str(hex_pos_differences.pop())
+        else:
+            diff_str = ','.join(str(d) for d in sorted(hex_pos_differences))
+        output.append(f"[{hex_pos}: {diff_str}]")
+    return output
 
-def compare_files(file1, file2):
+def compare_files(file1, file2, differences_set):
     content1 = process_file(file1)
     content2 = process_file(file2)
     differences = []
@@ -44,23 +55,22 @@ def compare_files(file1, file2):
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
-            diff_str = str(i+1)
+            diff_str = ''.join(content1[(hex_pos-1)*8:hex_pos*8])
             differences.append((hex_pos, diff_str))
-    if not differences:
-        return "Files are identical"
-    else:
-        combined_differences = combine_hex_pos_differences(differences)
-        return combined_differences
-
+    if differences:
+        differences_set.update(differences)
 
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
 # Create a new directory to hold the comparison results
-if not os.path.exists('comparison_results'):
-    os.makedirs('comparison_results')
+if not os.path.exists('Unique_BitPos'):
+    os.makedirs('Unique_BitPos')
 
+# Loop through each section in the config file
 for section in config.sections():
+    # Create a set to store all the unique differences
+    all_differences = set()
     section_results = []
     section_comparisons = []
     for item, filename in config.items(section):
@@ -69,22 +79,16 @@ for section in config.sections():
         section_results.append((item, filename))
     if len(section_results) > 1:
         # Compare the files in this section
-        section_dir = os.path.join('comparison_results', section)
-        if not os.path.exists(section_dir):
-            os.makedirs(section_dir)
         for i in range(len(section_results)):
             for j in range(i+1, len(section_results)):
                 item1, filename1 = section_results[i]
                 item2, filename2 = section_results[j]
-                differences = compare_files(filename1, filename2)
-                if differences == "Files are identical":
-                    result = f"{item1} & {item2} are identical."
-                else:
-                    result = f"{item1} & {item2}: {differences}"
-                section_comparisons.append(result)
-        # Write the section-specific comparison results to a text file
-        result_file = os.path.join(section_dir, f"{section}_comparison.txt")
-        with open(result_file, 'w') as f:
-            f.write('\n'.join(section_comparisons))
+                compare_files(filename1, filename2, all_differences)
 
+    # Get the unique differences
+    unique_differences = combine_hex_pos_differences(all_differences)
 
+    # Write the output to a text file
+    output_file = os.path.join('Unique_BitPos', f"{section}.txt")
+    with open(output_file, 'w') as f:
+        f.write('\n'.join(unique_differences))
