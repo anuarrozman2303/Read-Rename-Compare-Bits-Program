@@ -78,10 +78,6 @@ def compare_files(file1, file2, differences_set):
             
     if differences:
         differences_set.update(differences)
-        with open("new.txt", "a") as output_file:
-            output_file.write(f"{file1} + {file2}\n")
-            for difference in differences:
-                output_file.write(f"{difference[0]}, {difference[1]}\n")
     for i in range(0, len(content1), 8):
         group1 = content1[i:i+8]
         group2 = content2[i:i+8]
