@@ -86,5 +86,3 @@ for section in config.sections():
         result_file = os.path.join(section_dir, f"{section}_comparison.txt")
         with open(result_file, 'w') as f:
             f.write('\n'.join(section_comparisons))
-
-

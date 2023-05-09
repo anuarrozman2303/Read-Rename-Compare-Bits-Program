@@ -1,95 +1,108 @@
-import configparser
 import os
+import configparser
+
+def process_file(filename):
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+        # Filter process
+        for i in range(len(lines)):
+            lines[i] = lines[i].split(':', 1)[-1]
+            lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
+            lines[i] = lines[i].replace(':', '', 1)
+        # Remove empty lines & move up the data.
+        lines = [line.strip() for line in lines if line.strip()]
+
+        # Sort into groups of 8 consecutive "0" and "1"
+        groups = []
+        current_group = ''
+        for line in lines:
+            current_group += line
+            if len(current_group) == 8:
+                groups.append(current_group)
+                current_group = ''
+        if current_group:  # In case there's an incomplete group at the end
+            groups.append(current_group)
+
+        return lines, groups
+
+def group_by_hex_pos(differences):
+    hex_pos_dict = {}
+    for difference in differences:
+        hex_pos = difference[0]
+        if hex_pos not in hex_pos_dict:
+            hex_pos_dict[hex_pos] = []
+        hex_pos_dict[hex_pos].append(difference[1:])
+    return hex_pos_dict
+
+def combine_hex_pos_differences(differences):
+    hex_pos_dict = {}
+    for difference in differences:
+        hex_pos = difference[0]
+        if hex_pos not in hex_pos_dict:
+            hex_pos_dict[hex_pos] = set()
+        hex_pos_dict[hex_pos].update(difference[1:])
+    output = []
+    for hex_pos, hex_pos_differences in hex_pos_dict.items():
+        if len(hex_pos_differences) == 1:
+            diff_str = str(hex_pos_differences.pop())
+        else:
+            diff_str = ','.join(str(d) for d in sorted(hex_pos_differences))
+        output.append(f"[{hex_pos}: {diff_str}]")
+    return output
+
+def compare_files(file1, file2, differences_set):
+    content1 = process_file(file1)
+    content2 = process_file(file2)
+    differences = []
+    for i in range(0, len(content1), 8):
+        group1 = content1[i:i+8]
+        group2 = content2[i:i+8]
+        if group1 != group2:
+            hex_pos = (i // 8) + 1
+            if hex_pos in [8, 16, 35]:
+                continue
+            diff_str = ' '.join(str(group1)) + ' | ' + ' '.join(str(group2))
+            differences.append((hex_pos, diff_str))
+    if differences:
+        differences_set.update(differences)
+        with open("output.txt", "a") as output_file:
+            output_file.write(f"{file1} + {file2}\n")
+            for difference in differences:
+                output_file.write(f"{difference[0]}\n, {difference[1]}\n")
 
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
-def process_files(file1, file2):
-    with open(file1, 'r') as f1, open(file2, 'r') as f2:
-        lines1 = f1.readlines()
-        lines2 = f2.readlines()
-        # Filter process for file1
-        for i in range (len(lines1)):
-            lines1[i] = lines1[i].split(':', 1)[-1]
-            lines1[i] = ''.join([c for c in lines1[i] if not c.isalpha()])
-            lines1[i] = lines1[i].replace(':', '', 1)
-        # Filter process for file2
-        for i in range(len(lines2)):
-            lines2[i] = lines2[i].split(':', 1)[-1]
-            lines2[i] = ''.join([c for c in lines2[i] if not c.isalpha()])
-            lines2[i] = lines2[i].replace(':', '', 1)
-        # Remove empty lines & move up the data.
-        lines1 = [line.strip() for line in lines1 if line.strip()]
-        lines2 = [line.strip() for line in lines2 if line.strip()]
-
-        # Initialize counts and positions
-        count_0, count_1 = 0, 0
-        positions_0, positions_1 = [], []
-
-        # Iterate through each line and count 0's and 1's and their positions
-        for i in range(min(len(lines1), len(lines2))):
-            if lines1[i] != lines2[i]:
-                count_0_line, count_1_line = 0, 0
-                start_pos_0, start_pos_1 = -1, -1
-                for j in range(min(len(lines1[i]), len(lines2[i]))):
-                    if lines1[i][j] != lines2[i][j]:
-                        if lines1[i][j] == '0':
-                            count_0_line += 1
-                            if start_pos_0 == -1:
-                                start_pos_0 = j
-                        elif lines1[i][j] == '1':
-                            count_1_line += 1
-                            if start_pos_1 == -1:
-                                start_pos_1 = j
-                        if count_0_line > 8:
-                            positions_0.append((i+1, start_pos_0, j-1))
-                            start_pos_0 = j
-                            count_0_line = 1
-                        if count_1_line > 8:
-                            positions_1.append((i+1, start_pos_1, j-1))
-                            start_pos_1 = j
-                            count_1_line = 1
-                if count_0_line > 0:
-                    positions_0.append((i+1, start_pos_0, len(lines1[i])-1))
-                if count_1_line > 0:
-                    positions_1.append((i+1, start_pos_1, len(lines1[i])-1))
-
-        # Sort positions in ascending order
-        positions_0 = sorted(positions_0)
-        positions_1 = sorted(positions_1)
-
-        # Calculate hex values for positions
-        hex_positions_0 = [(pos[0], pos[1], pos[0]*8 + pos[1] - 1) for pos in positions_0]
-        hex_positions_1 = [(pos[0], pos[1], pos[0]*8 + pos[1] - 1) for pos in positions_1]
-
-        # Write output as string
-        output_str = f'Total changes:\n'
-        for pos in sorted(hex_positions_0 + hex_positions_1, key=lambda x: x[2]):
-            if pos in hex_positions_0:
-                if pos[0]//8 != 35:
-                    ## [hex_pos,bit_pos,setto0],[hex_pos,bit_pos,settoValue]
-                    ## ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]
-                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-                else:
-                    output_str += f'["{(pos[0]-1)//8}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-            elif pos in hex_positions_1:
-                if pos[0]//8 != 35:
-                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-                else:
-                    output_str += f'["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo 0], ["{(pos[0]-1)//8 + 1}","{pos[0]-1}",SetTo {lines2[pos[0]-1][pos[1]-1]}]\n'
-        return output_str
+# Create a new directory to hold the comparison results
+if not os.path.exists('new'):
+    os.makedirs('new')
 
 # Loop through each section in the config file
 for section in config.sections():
-    if section in ['on_off', 'temp', 'mode', 'fan', 'vlourve', 'hlourve', 'misc1', 'misc2']:
-        section_output_str = ''
-        section_items = list(config.items(section))
-        first_file = section_items[0][1]
-        for item in section_items[1:]:
-            current_file = item[1]
-            output_str = process_files(first_file, current_file)
-            section_output_str += f'{first_file} vs {current_file}:\n{output_str}\n'
-        # Write output to file
-        output_file = f'BinaryFormat_{section}_output.txt'
-        with open(output_file, 'w') as f:
-            f.write(section_output_str)
+    # Create a set to store all the unique differences
+    all_differences = set()
+    section_results = []
+    section_comparisons = []
+    for item, filename in config.items(section):
+        if not os.path.isfile(filename):
+            continue
+        section_results.append((item, filename))
+    if len(section_results) > 1:
+        # Compare the files in this section
+        for i in range(len(section_results)):
+            for j in range(i+1, len(section_results)):
+                item1, filename1 = section_results[i]
+                item2, filename2 = section_results[j]
+                compare_files(filename1, filename2, all_differences)
+
+    # Get the unique differences
+    unique_differences = combine_hex_pos_differences(all_differences)
+
+    # Write the output to a text file
+    output_file = os.path.join('new', f"{section}.txt")
+    with open(output_file, 'w') as f:
+        f.write('\n'.join(unique_differences))
+
+
+
+

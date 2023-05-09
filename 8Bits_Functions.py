@@ -1,15 +1,3 @@
-## This code will process the export files from PulseView.
-## The process files will be sort based on sections in the config file.
-## Then the files for key-value in section will be compared.
-## The difference data locations will be printed out as [<hex_pos>: <bit_positions>]
-## The unique <bit_positions> in each sections will be printed out in the terminal.
-## <section_name>
-## [<hex_pos>: <list_of_unique_bit_position>]
-
-
-## Continue separate by section output.
-## Fix bits print by 1 byte. (8bits)
-
 import os
 import configparser
 
@@ -24,6 +12,30 @@ def process_file(filename):
         # Remove empty lines & move up the data.
         lines = [line.strip() for line in lines if line.strip()]
         return lines
+
+def process_group(filename):
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            # Filter process
+            for i in range(len(lines)):
+                lines[i] = lines[i].split(':', 1)[-1]
+                lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
+                lines[i] = lines[i].replace(':', '', 1)
+            # Remove empty lines & move up the data.
+            lines = [line.strip() for line in lines if line.strip()]
+
+            # Sort into groups of 8 consecutive "0" and "1"
+            groups = []
+            current_group = ''
+            for line in lines:
+                current_group += line
+                if len(current_group) == 8:
+                    groups.append(current_group)
+                    current_group = ''
+            if current_group:  # In case there's an incomplete group at the end
+                groups.append(current_group)
+
+            return groups
 
 def group_by_hex_pos(differences):
     hex_pos_dict = {}
@@ -53,6 +65,8 @@ def combine_hex_pos_differences(differences):
 def compare_files(file1, file2, differences_set):
     content1 = process_file(file1)
     content2 = process_file(file2)
+    group1 = process_group(file1)
+    group1 = process_group(file1)
     differences = []
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
@@ -61,14 +75,27 @@ def compare_files(file1, file2, differences_set):
                 continue
             diff_str = str(i+1)
             differences.append((hex_pos, diff_str))
+            
     if differences:
         differences_set.update(differences)
         with open("new.txt", "a") as output_file:
             output_file.write(f"{file1} + {file2}\n")
             for difference in differences:
                 output_file.write(f"{difference[0]}, {difference[1]}\n")
-
-
+    for i in range(0, len(content1), 8):
+        group1 = content1[i:i+8]
+        group2 = content2[i:i+8]
+        if group1 != group2:
+            hex_pos = (i // 8) + 1
+            if hex_pos in [8, 16, 35]:
+                continue
+            diff_str1 = ''.join(str(group1)) + f"{file1}\n"
+            diff_str2 = ''.join(str(group2)) + f"{file2}\n"
+            differences.append((hex_pos, diff_str1))
+            differences.append((hex_pos, diff_str2))
+    if differences:
+        differences_set.update(differences)
+        
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
