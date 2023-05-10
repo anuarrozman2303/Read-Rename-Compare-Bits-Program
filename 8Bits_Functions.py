@@ -73,7 +73,7 @@ def compare_files(file1, file2, differences_set):
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
-            diff_str = str(i+1)
+            diff_str = str(i+1) + "\n"
             differences.append((hex_pos, diff_str))
             
     if differences:
@@ -96,8 +96,8 @@ config = configparser.ConfigParser()
 config.read('configsample.ini')
 
 # Create a new directory to hold the comparison results
-if not os.path.exists('new'):
-    os.makedirs('new')
+if not os.path.exists('8Bits'):
+    os.makedirs('8Bits')
 
 # Loop through each section in the config file
 for section in config.sections():
@@ -121,7 +121,7 @@ for section in config.sections():
     unique_differences = combine_hex_pos_differences(all_differences)
 
     # Write the output to a text file
-    output_file = os.path.join('new', f"{section}.txt")
+    output_file = os.path.join('8Bits', f"{section}.txt")
     with open(output_file, 'w') as f:
         f.write('\n'.join(unique_differences))
 
