@@ -1,5 +1,6 @@
 import os
 import configparser
+import re
 
 def process_file(filename):
     with open(filename, 'r') as f:
@@ -85,12 +86,22 @@ def compare_files(file1, file2, differences_set):
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
-            diff_str1 = ''.join(str(group1)) + f"{file1}\n"
-            diff_str2 = ''.join(str(group2)) + f"{file2}\n"
-            differences.append((hex_pos, diff_str1))
-            differences.append((hex_pos, diff_str2))
+            # Original 8-bits value
+            #diff_str1 = ''.join(str(group1)) + f"{file1}\n"
+            #diff_str2 = ''.join(str(group2)) + f"{file2}\n"
+            # Invert 8-bits value
+            input1 = (str(group1)[::-1] + f"{file1}\n")
+            input2 = (str(group2)[::-1] + f"{file2}\n")
+            input1 = ''.join(input1)
+            print(''.join((input1)), end='')
+            differences.append((hex_pos, input1))
+            differences.append((hex_pos, input2))
     if differences:
         differences_set.update(differences)
+        
+def use_regex(input_text):
+    pattern = re.compile(r"'0' ,'0' ,'1' ,'1' ,'1' ,'0' ,'0' ,'1'", re.IGNORECASE)
+    return pattern.match(input_text)
         
 config = configparser.ConfigParser()
 config.read('configsample.ini')
@@ -124,7 +135,6 @@ for section in config.sections():
     output_file = os.path.join('8Bits', f"{section}.txt")
     with open(output_file, 'w') as f:
         f.write('\n'.join(unique_differences))
-
 
 
 

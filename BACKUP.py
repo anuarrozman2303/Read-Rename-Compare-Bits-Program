@@ -13,6 +13,30 @@ def process_file(filename):
         lines = [line.strip() for line in lines if line.strip()]
         return lines
 
+def process_group(filename):
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            # Filter process
+            for i in range(len(lines)):
+                lines[i] = lines[i].split(':', 1)[-1]
+                lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
+                lines[i] = lines[i].replace(':', '', 1)
+            # Remove empty lines & move up the data.
+            lines = [line.strip() for line in lines if line.strip()]
+
+            # Sort into groups of 8 consecutive "0" and "1"
+            groups = []
+            current_group = ''
+            for line in lines:
+                current_group += line
+                if len(current_group) == 8:
+                    groups.append(current_group)
+                    current_group = ''
+            if current_group:  # In case there's an incomplete group at the end
+                groups.append(current_group)
+
+            return groups
+
 def group_by_hex_pos(differences):
     hex_pos_dict = {}
     for difference in differences:
@@ -41,23 +65,45 @@ def combine_hex_pos_differences(differences):
 def compare_files(file1, file2, differences_set):
     content1 = process_file(file1)
     content2 = process_file(file2)
+    group1 = process_group(file1)
+    group1 = process_group(file1)
     differences = []
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
-            diff_str = str(i+1)
+            diff_str = str(i+1) + "\n"
             differences.append((hex_pos, diff_str))
+            
     if differences:
         differences_set.update(differences)
-
+    for i in range(0, len(content1), 8):
+        group1 = content1[i:i+8]
+        group2 = content2[i:i+8]
+        if group1 != group2:
+            hex_pos = (i // 8) + 1
+            if hex_pos in [8, 16, 35]:
+                continue
+            # Original 8-bits value
+            #diff_str1 = ''.join(str(group1)) + f"{file1}\n"
+            #diff_str2 = ''.join(str(group2)) + f"{file2}\n"
+            # Invert 8-bits value
+            input1 = (str(group1)[::-1] + f"{file1}\n")
+            input2 = (str(group2)[::-1] + f"{file2}\n")
+            input1 = ''.join(input1)
+            print(''.join((input1)), end='')
+            differences.append((hex_pos, input1))
+            differences.append((hex_pos, input2))
+    if differences:
+        differences_set.update(differences)
+        
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
 # Create a new directory to hold the comparison results
-if not os.path.exists('Unique_BitPos'):
-    os.makedirs('Unique_BitPos')
+if not os.path.exists('8Bits'):
+    os.makedirs('8Bits')
 
 # Loop through each section in the config file
 for section in config.sections():
@@ -81,7 +127,7 @@ for section in config.sections():
     unique_differences = combine_hex_pos_differences(all_differences)
 
     # Write the output to a text file
-    output_file = os.path.join('Unique_BitPos', f"{section}.txt")
+    output_file = os.path.join('8Bits', f"{section}.txt")
     with open(output_file, 'w') as f:
         f.write('\n'.join(unique_differences))
 

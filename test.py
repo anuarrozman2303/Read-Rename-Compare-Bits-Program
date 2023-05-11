@@ -58,7 +58,7 @@ def combine_hex_pos_differences(differences):
         if len(hex_pos_differences) == 1:
             diff_str = str(hex_pos_differences.pop())
         else:
-            diff_str = '\n'.join(str(d) for d in sorted(hex_pos_differences))
+            diff_str = ','.join(str(d) for d in sorted(hex_pos_differences))
         output.append(f"[{hex_pos}: {diff_str}]")
     return output
 
@@ -73,11 +73,8 @@ def compare_files(file1, file2, differences_set):
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
-            diff_str = str(i+1)
-            end_pos = (hex_pos * 8)
-            start_pos =  end_pos - 7
+            diff_str = str(i+1) + "\n"
             differences.append((hex_pos, diff_str))
-            differences.append((start_pos, end_pos))
             
     if differences:
         differences_set.update(differences)
@@ -88,10 +85,13 @@ def compare_files(file1, file2, differences_set):
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
-            diff_str1 = "\n" + f"{file1}\n" + ''.join(str(group1) + "\n")
-            diff_str2 = "\n" + f"{file2}\n" + ''.join(str(group2) + "\n") 
+            
+            diff_str1 = ''.join(str(group1)) + f"{file1}\n"
+            diff_str2 = ''.join(str(group2)) + f"{file2}\n"
             differences.append((hex_pos, diff_str1))
             differences.append((hex_pos, diff_str2))
+            print(diff_str1)
+            print(diff_str2)
     if differences:
         differences_set.update(differences)
         
@@ -126,7 +126,7 @@ for section in config.sections():
     # Write the output to a text file
     output_file = os.path.join('8Bits', f"{section}.txt")
     with open(output_file, 'w') as f:
-        f.write('\n\n'.join(unique_differences))
+        f.write('\n'.join(unique_differences))
 
 
 
