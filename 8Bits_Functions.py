@@ -77,7 +77,14 @@ def compare_files(file1, file2, differences_set):
             diff_str = str(i+1)
             end_pos = (hex_pos * 8)
             start_pos = (end_pos) - 7
-            print(f"{hex_pos}: " + "Start" + str(start_pos) + "End" + str(end_pos))
+            first_four_bits = start_pos - 1
+            second_four_bits = start_pos + 3
+            for i in range(4):
+                first_four_bits += 1
+                #print(first_four_bits)
+                second_four_bits += 1
+                #print(second_four_bits)
+            print(f"{hex_pos}: " + "Start" + str(first_four_bits) + "End" + str(second_four_bits))
             #print(diff_str)
             differences.append((hex_pos, diff_str))
 
@@ -130,7 +137,7 @@ for section in config.sections():
     # Get the unique differences
     unique_differences = combine_hex_pos_differences(all_differences)
 
-    print(unique_differences)
+    #print(unique_differences)
     # Write the output to a text file
     output_file = os.path.join('8Bits', f"{section}.txt")
     with open(output_file, 'w') as f:
