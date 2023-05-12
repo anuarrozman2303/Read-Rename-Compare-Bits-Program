@@ -1,12 +1,10 @@
-[30: 238
-,]'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0'[econo.txt
-,]'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0'[econo_quiet_off.txt
-,]'0' ,'0' ,'1' ,'0' ,'0' ,'0' ,'0' ,'0'[econo_quiet.txt
-,]'0' ,'0' ,'1' ,'0' ,'0' ,'0' ,'0' ,'0'[quiet.txt
-]
-[33: 259
-,]'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0'[econo_quiet_off.txt
-,]'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0'[quiet.txt
-,]'0' ,'0' ,'0' ,'0' ,'0' ,'1' ,'0' ,'0'[econo.txt
-,]'0' ,'0' ,'0' ,'0' ,'0' ,'1' ,'0' ,'0'[econo_quiet.txt
-]
+[{"name":"quiet.txt", "inst": [33,0,12]: ]
+[33: 259]
+[{"name":"quiet.txt", "inst": [30,32,12]: ]
+[{"name":"econo.txt", "inst": [30,0,12]: ]
+[{"name":"econo_quiet.txt", "inst": [30,32,12]: ]
+[{"name":"econo_quiet.txt", "inst": [33,4,12]: ]
+[30: 238]
+[{"name":"econo.txt", "inst": [33,4,12]: ]
+[{"name":"econo_quiet_off.txt", "inst": [33,0,12]: ]
+[{"name":"econo_quiet_off.txt", "inst": [30,0,12]: ]

@@ -1,5 +1,6 @@
 import os
 import configparser
+import re
 
 def process_file(filename):
     with open(filename, 'r') as f:
@@ -66,18 +67,9 @@ def compare_files(file1, file2, differences_set):
     content1 = process_file(file1)
     content2 = process_file(file2)
     group1 = process_group(file1)
-    group1 = process_group(file1)
+    group2 = process_group(file2)
     differences = []
-    for i, (line1, line2) in enumerate(zip(content1, content2)):
-        if line1 != line2:
-            hex_pos = (i // 8) + 1
-            if hex_pos in [8, 16, 35]:
-                continue
-            diff_str = str(i+1) + "\n"
-            differences.append((hex_pos, diff_str))
-            
-    if differences:
-        differences_set.update(differences)
+
     for i in range(0, len(content1), 8):
         group1 = content1[i:i+8]
         group2 = content2[i:i+8]
@@ -86,18 +78,24 @@ def compare_files(file1, file2, differences_set):
             if hex_pos in [8, 16, 35]:
                 continue
             # Original 8-bits value
-            #diff_str1 = ''.join(str(group1)) + f"{file1}\n"
-            #diff_str2 = ''.join(str(group2)) + f"{file2}\n"
+            #diff_str1 = ''.join(str(group1)) + f"Original_{file1}" + "\n"
+            #diff_str2 = ''.join(str(group2)) + f"Original_{file2}" + "\n"
             # Invert 8-bits value
-            input1 = (str(group1)[::-1] + f"{file1}\n")
-            input2 = (str(group2)[::-1] + f"{file2}\n")
-            input1 = ''.join(input1)
-            print(''.join((input1)), end='')
-            differences.append((hex_pos, input1))
-            differences.append((hex_pos, input2))
+            binary_str1 = ''.join(str(group1)[::-1])
+            binary_str2 = ''.join(str(group2)[::-1])
+            # Remove other things except 8-bits binary
+            input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
+            input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
+            ## input1 & input2 for operation 12???
+            jsonformat1 = "{" + '"name":' + f'"{file1}", "inst": ' + "[" + f"{hex_pos}," + f"{input1}," + "12" + "]" + "[" + f"{hex_pos}," + f"{input1}," + "13" + "]}"
+            jsonformat2 = "{" + '"name":' + f'"{file2}", "inst": ' + "[" + f"{hex_pos}," + f"{input2}," + "12" + "]" + "[" + f"{hex_pos}," + f"{input2}," + "13" + "]}"
+            # Write the output to a text file
+            print(''.join(jsonformat1))
+            print(''.join(jsonformat2))
+            differences.append((jsonformat1,))
+            differences.append((jsonformat2,))
     if differences:
         differences_set.update(differences)
-        
 config = configparser.ConfigParser()
 config.read('configsample.ini')
 
@@ -126,6 +124,7 @@ for section in config.sections():
     # Get the unique differences
     unique_differences = combine_hex_pos_differences(all_differences)
 
+    print(unique_differences)
     # Write the output to a text file
     output_file = os.path.join('8Bits', f"{section}.txt")
     with open(output_file, 'w') as f:
