@@ -17,3 +17,7 @@ for i in range(4):
             print("1")  # The bit falls within the range of bits we're interested in
         else:
             print("2")
+
+
+## guna modulus (bit_pos)/8 get xx.yy
+## then .yy * 8 = exact position

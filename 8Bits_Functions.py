@@ -98,6 +98,7 @@ def compare_files(file1, file2, differences_set):
             # Invert 8-bits value
             binary_str1 = ''.join(str(group1)[::-1])
             binary_str2 = ''.join(str(group2)[::-1])
+            print(binary_str2)
             # Remove other things except 8-bits binary
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
