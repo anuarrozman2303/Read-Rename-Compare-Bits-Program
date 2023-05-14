@@ -75,18 +75,15 @@ def compare_files(file1, file2, differences_set):
             if hex_pos in [8, 16, 35]:
                 continue
             diff_str = str(i+1)
-            end_pos = (hex_pos * 8)
-            start_pos = (end_pos) - 7
-            first_four_bits = start_pos - 1
-            second_four_bits = start_pos + 3
-            for i in range(4):
-                first_four_bits += 1
-                #print(first_four_bits)
-                second_four_bits += 1
-                #print(second_four_bits)
-            print(f"{hex_pos}: " + "Start" + str(first_four_bits) + "End" + str(second_four_bits))
-            #print(diff_str)
-            differences.append((hex_pos, diff_str))
+            for digit in diff_str:
+                diff_val = int(digit)
+                diff_pos = diff_val % 8
+                if diff_pos in range (1, 5):
+                    print(f"{hex_pos}:" + " 1st 4-bits")
+                else:
+                    print(f"{hex_pos}:" + " 2nd 4-bits")
+
+            #differences.append((hex_pos, diff_str))
 
     for i in range(0, len(content1), 8):
         group1 = content1[i:i+8]
@@ -98,7 +95,6 @@ def compare_files(file1, file2, differences_set):
             # Invert 8-bits value
             binary_str1 = ''.join(str(group1)[::-1])
             binary_str2 = ''.join(str(group2)[::-1])
-            print(binary_str2)
             # Remove other things except 8-bits binary
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)

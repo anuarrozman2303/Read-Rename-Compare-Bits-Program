@@ -1,22 +1,14 @@
-bit_positions = [197, 198, 199, 200]
+bit_positions = [193, 194, 195, 196]
 hex_position = 25
 
-end_pos = (hex_position * 8) 
-start_pos = end_pos - 7
-
-first_four_bits = start_pos - 1
-second_four_bits = start_pos + 3
-for i in range(4):
-    first_four_bits += 1
-    #print(first_four_bits)
-    second_four_bits += 1
-    #print(second_four_bits)
-    # Loop over each bit position in the list and check if it falls within the range of bits we're interested in
-    for j in range(len(bit_positions)):
-        if bit_positions[j] >= start_pos and bit_positions[j] <= end_pos:
-            print("1")  # The bit falls within the range of bits we're interested in
-        else:
-            print("2")
+for i in bit_positions:
+    pos = i % 8
+    # Excluding 5 (1-4)
+    if pos in range(1, 5):
+        print("First 4-bits")
+    # (5-0) 0 which is '8'
+    else:
+        print("Second 4-bits")
 
 
 ## guna modulus (bit_pos)/8 get xx.yy
