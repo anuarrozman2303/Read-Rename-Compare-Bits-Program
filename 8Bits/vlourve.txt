@@ -1,2 +1,2 @@
-[{"name":"vlourveon.txt", "inst": [25,175,12]: ]
-[{"name":"vlourveoff.txt", "inst": [25,160,12]: ]
+{"name": "vlourveon.txt", "inst": [25, 15, 12], [25, 175, 12]} 
+{"name": "vlourveoff.txt", "inst": [25, 15, 12], [25, 160, 12]} 

@@ -38,15 +38,6 @@ def process_group(filename):
 
             return groups
 
-def group_by_hex_pos(differences):
-    hex_pos_dict = {}
-    for difference in differences:
-        hex_pos = difference[0]
-        if hex_pos not in hex_pos_dict:
-            hex_pos_dict[hex_pos] = []
-        hex_pos_dict[hex_pos].append(difference[1:])
-    return hex_pos_dict
-
 def combine_hex_pos_differences(differences):
     hex_pos_dict = {}
     for difference in differences:
@@ -69,21 +60,13 @@ def compare_files(file1, file2, differences_set):
     group1 = process_group(file1)
     group2 = process_group(file2)
     differences = []
+    diff_str = []
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
             diff_str = str(i+1)
-            for digit in diff_str:
-                diff_val = int(digit)
-                diff_pos = diff_val % 8
-                if diff_pos in range (1, 5):
-                    print(f"{hex_pos}:" + " 1st 4-bits")
-                else:
-                    print(f"{hex_pos}:" + " 2nd 4-bits")
-
-            #differences.append((hex_pos, diff_str))
 
     for i in range(0, len(content1), 8):
         group1 = content1[i:i+8]
@@ -98,9 +81,20 @@ def compare_files(file1, file2, differences_set):
             # Remove other things except 8-bits binary
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
-            ## input1 & input2 for operation 12???
-            jsonformat1 = "{" + '"name":' + f'"{file1}", "inst": ' + "[" + f"{hex_pos}," + f"{input1}," + "12" + "]"
-            jsonformat2 = "{" + '"name":' + f'"{file2}", "inst": ' + "[" + f"{hex_pos}," + f"{input2}," + "12" + "]"
+            diff_pos = (int(diff_str) % 8)
+            #print(f'{section} ' + diff_str + " " + str(diff_pos))
+            cond1 = diff_pos in range(1, 5)
+            cond2 = diff_pos in range(5, 9) or diff_pos == 0
+            cond3 = diff_pos >= 0 and diff_pos <= 8
+            if cond1:
+                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 15, 12], [{hex_pos}, {input1}, 12]}}\n'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 15, 12], [{hex_pos}, {input2}, 12]}}\n'
+            elif cond2:
+                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 240, 12], [{hex_pos}, {input1}, 12]}}\n'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 240, 12], [{hex_pos}, {input2}, 12]}}\n'
+            elif cond3:
+                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 255, 12], [{hex_pos}, {input1}, 12]}}\n'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 255, 12], [{hex_pos}, {input2}, 12]}}\n'
             differences.append((jsonformat1,))
             differences.append((jsonformat2,))
     if differences:

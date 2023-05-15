@@ -1,8 +1,7 @@
-bit_positions = [193, 194, 195, 196]
-hex_position = 25
-
+bit_positions = [238]
 for i in bit_positions:
     pos = i % 8
+    print(pos)
     # Excluding 5 (1-4)
     if pos in range(1, 5):
         print("First 4-bits")
@@ -10,6 +9,13 @@ for i in bit_positions:
     else:
         print("Second 4-bits")
 
+fruits = []
+print("1" + str(fruits))
+for i in range(10):
+    fruits.append("Orange")
+    print(fruits)
 
-## guna modulus (bit_pos)/8 get xx.yy
-## then .yy * 8 = exact position
+print(fruits)
+for i in range(4):
+    fruits.append("Apple")
+    print(fruits)

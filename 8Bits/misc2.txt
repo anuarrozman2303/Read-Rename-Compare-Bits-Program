@@ -1,4 +1,4 @@
-[{"name":"comfort_on.txt", "inst": [7,16,12]: ]
-[{"name":"comfort_off.txt", "inst": [33,0,12]: ]
-[{"name":"comfort_off.txt", "inst": [7,0,12]: ]
-[{"name":"comfort_on.txt", "inst": [33,2,12]: ]
+{"name": "comfort_on.txt", "inst": [7, 15, 12], [7, 16, 12]} 
+{"name": "comfort_off.txt", "inst": [33, 15, 12], [33, 0, 12]} 
+{"name": "comfort_off.txt", "inst": [7, 15, 12], [7, 0, 12]} 
+{"name": "comfort_on.txt", "inst": [33, 15, 12], [33, 2, 12]} 

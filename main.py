@@ -1,51 +1,5 @@
 import os
 import configparser
-import re
-
-def process_file(filename):
-    with open(filename, 'r') as f:
-        lines = f.readlines()
-        # Filter process
-        for i in range(len(lines)):
-            lines[i] = lines[i].split(':', 1)[-1]
-            lines[i] = ''.join([c for c in lines[i] if not c.isalpha( )])
-            lines[i] = lines[i].replace(':', '', 1)
-        # Remove empty lines & move up the data.
-        lines = [line.strip() for line in lines if line.strip()]
-        return lines
-
-def process_group(filename):
-        with open(filename, 'r') as f:
-            lines = f.readlines()
-            # Filter process
-            for i in range(len(lines)):
-                lines[i] = lines[i].split(':', 1)[-1]
-                lines[i] = ''.join([c for c in lines[i] if not c.isalpha()])
-                lines[i] = lines[i].replace(':', '', 1)
-            # Remove empty lines & move up the data.
-            lines = [line.strip() for line in lines if line.strip()]
-
-            # Sort into groups of 8 consecutive "0" and "1"
-            groups = []
-            current_group = ''
-            for line in lines:
-                current_group += line
-                if len(current_group) == 8:
-                    groups.append(current_group)
-                    current_group = ''
-            if current_group:  # In case there's an incomplete group at the end
-                groups.append(current_group)
-
-            return groups
-
-def group_by_hex_pos(differences):
-    hex_pos_dict = {}
-    for difference in differences:
-        hex_pos = difference[0]
-        if hex_pos not in hex_pos_dict:
-            hex_pos_dict[hex_pos] = []
-        hex_pos_dict[hex_pos].append(difference[1:])
-    return hex_pos_dict
 
 def combine_hex_pos_differences(differences):
     hex_pos_dict = {}
@@ -60,15 +14,38 @@ def combine_hex_pos_differences(differences):
             diff_str = str(hex_pos_differences.pop())
         else:
             diff_str = ','.join(str(d) for d in sorted(hex_pos_differences))
-        output.append(f"[{hex_pos}: {diff_str}]")
+        output.append(f"{hex_pos} {diff_str}")
     return output
 
 def compare_files(file1, file2, differences_set):
-    content1 = process_file(file1)
-    content2 = process_file(file2)
-    group1 = process_group(file1)
-    group2 = process_group(file2)
+    def process_file(filename):
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            # Filter process
+            for i in range(len(lines)):
+                lines[i] = lines[i].split(':', 1)[-1]
+                lines[i] = ''.join([c for c in lines[i] if not c.isalpha( )])
+                lines[i] = lines[i].replace(':', '', 1)
+            # Remove empty lines & move up the data.
+            lines = [line.strip() for line in lines if line.strip()]
+
+            # Sort into groups of 8 consecutive "0" and "1"
+            groups = []
+            current_group = ''
+            for line in lines:
+                current_group += line
+                if len(current_group) == 8:
+                    groups.append(current_group)
+                    current_group = ''
+            if current_group:  # In case there's an incomplete group at the end
+                    groups.append(current_group)
+
+            return lines, groups
+    
+    content1,group1 = process_file(file1)
+    content2,group2 = process_file(file2)
     differences = []
+    diff_str = []
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
             hex_pos = (i // 8) + 1
@@ -89,16 +66,25 @@ def compare_files(file1, file2, differences_set):
             # Remove other things except 8-bits binary
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
-            ## input1 & input2 for operation 12???
-            for digit in diff_str:
-                diff_val = int(digit)
-                diff_pos = (diff_val % 8) * 8
-                if diff_pos in range (1, 5):
-                    jsonformat1 = "{" + '"name":' + f'"{file1}", "inst": ' + "[" + f"{hex_pos}," + "240," + "12" + "]"
-                    jsonformat2 = "{" + '"name":' + f'"{file2}", "inst": ' + "[" + f"{hex_pos}," + "240," + "12" + "]"
-                else:
-                    jsonformat1 = "{" + '"name":' + f'"{file1}", "inst": ' + "[" + f"{hex_pos}," + "15," + "12" + "]"
-                    jsonformat2 = "{" + '"name":' + f'"{file2}", "inst": ' + "[" + f"{hex_pos}," + "15," + "12" + "]"
+            diff_pos = (int(diff_str) % 8)
+            #print(f'{section} ' + diff_str + " " + str(diff_pos))
+            cond1 = diff_pos in range(1, 5)
+            cond2 = diff_pos in range(5, 9) or diff_pos == 0
+            cond3 = diff_pos >= 0 and diff_pos <= 8
+            if cond1:
+                #print(f"{section} " + f"{hex_pos} " + str(diff_pos))
+                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 15, 12], [{hex_pos}, {input1}, 12]}}'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 15, 12], [{hex_pos}, {input2}, 12]}}'
+
+            elif cond2:
+                #print(f"{section} " + f"{hex_pos} " + str(diff_pos))
+                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 240, 12], [{hex_pos}, {input1}, 12]}}'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 240, 12], [{hex_pos}, {input2}, 12]}}'
+
+            elif cond3:
+                #print(f"{section} " + f"{hex_pos} " + str(diff_pos))
+                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 255, 12], [{hex_pos}, {input1}, 12]}}'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 255, 12], [{hex_pos}, {input2}, 12]}}'
             differences.append((jsonformat1,))
             differences.append((jsonformat2,))
     if differences:
