@@ -1,2 +1,0 @@
-{"name": "hlourveon.txt", "inst": [26, 15, 12], [26, 15, 12]} 
-{"name": "hlourveoff.txt", "inst": [26, 15, 12], [26, 0, 12]} 

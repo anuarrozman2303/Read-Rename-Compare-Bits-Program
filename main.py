@@ -67,26 +67,27 @@ def compare_files(file1, file2, differences_set):
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
             diff_pos = (int(diff_str) % 8)
-            #print(f'{section} ' + diff_str + " " + str(diff_pos))
+            print(f'{section} ' + diff_str + " " + str(diff_pos))
             cond1 = diff_pos in range(1, 5)
             cond2 = diff_pos in range(5, 9) or diff_pos == 0
-            cond3 = diff_pos >= 0 and diff_pos <= 8
+            cond3 = cond1 and cond2
+            header = ("{" + '"id":' + f'"{section}", "cmd":[')
             if cond1:
                 #print(f"{section} " + f"{hex_pos} " + str(diff_pos))
-                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 15, 12], [{hex_pos}, {input1}, 12]}}'
-                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 15, 12], [{hex_pos}, {input2}, 12]}}'
+                jsonformat1 = f'{{"name": "{file1}", "inst": [[{hex_pos}, 15, 12], [{hex_pos}, {input1}, 12]]}}'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [[{hex_pos}, 15, 12], [{hex_pos}, {input2}, 12]]}}'
 
-            elif cond2:
+            if cond2:
                 #print(f"{section} " + f"{hex_pos} " + str(diff_pos))
-                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 240, 12], [{hex_pos}, {input1}, 12]}}'
-                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 240, 12], [{hex_pos}, {input2}, 12]}}'
+                jsonformat1 = f'{{"name": "{file1}", "inst": [[{hex_pos}, 240, 12], [{hex_pos}, {input1}, 12]]}}'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [[{hex_pos}, 240, 12], [{hex_pos}, {input2}, 12]]}}'
 
-            elif cond3:
+            if cond3:
                 #print(f"{section} " + f"{hex_pos} " + str(diff_pos))
-                jsonformat1 = f'{{"name": "{file1}", "inst": [{hex_pos}, 255, 12], [{hex_pos}, {input1}, 12]}}'
-                jsonformat2 = f'{{"name": "{file2}", "inst": [{hex_pos}, 255, 12], [{hex_pos}, {input2}, 12]}}'
-            differences.append((jsonformat1,))
-            differences.append((jsonformat2,))
+                jsonformat1 = f'{{"name": "{file1}", "inst": [[{hex_pos}, 255, 12], [{hex_pos}, {input1}, 12]]}}'
+                jsonformat2 = f'{{"name": "{file2}", "inst": [[{hex_pos}, 255, 12], [{hex_pos}, {input2}, 12]]}}'
+            differences.append((header,jsonformat1,))
+            differences.append((header,jsonformat2,))
     if differences:
         differences_set.update(differences)
 
@@ -120,7 +121,7 @@ for section in config.sections():
 
     #print(unique_differences)
     # Write the output to a text file
-    output_file = os.path.join('8Bits', f"{section}.txt")
+    output_file = os.path.join('8Bits', f"{section}.json")
     with open(output_file, 'w') as f:
         f.write('\n'.join(unique_differences))
 
