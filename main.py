@@ -130,7 +130,9 @@ for section in config.sections():
     if section == 'temp':
         output_file = os.path.join('8Bits', f"{section}.json")
         with open(output_file, 'w') as f:
-            f.write('"tCod":[diff,min,max],\n')
+            input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
+            input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
+            f.write(f'"tCod":{[input1, input2]},\n')
             f.write('"tDis":[incr,min temp,max temp],\n')
             f.write('"tAdd":<hex pos>,\n')
             f.write('"tUnit":"<Unit>",\n')
