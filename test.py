@@ -77,16 +77,6 @@ def compare_files(file1, file2, differences_set):
                 jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},240,12],[{hex_pos},{input2},12]]}}'
             differences.append((header,jsonformat1,))
             differences.append((header,jsonformat2,))
-    if section == 'temp':
-        output_file = os.path.join('8Bits', f"{section}.json")
-        with open(output_file, 'w') as f:
-            f.write('"tCod":[' + f"{section}," + f"{str(min(input1, input2))}," + f"{str(max(input1, input2))}]\n")
-            f.write('"tDis":[incr,min temp,max temp],\n')
-            f.write('"tAdd":' + f"{hex_pos}\n")
-            f.write('"tUnit":' + '"C"\n')
-            f.write(f"\n\n{item}\n\n")
-            f.write(str(min(input1, input2))+',\n')
-            f.write(str(max(input1, input2))+'\n')
     if differences:
         differences_set.update(differences)
     return input1, input2
@@ -116,7 +106,6 @@ for section in config.sections():
                 unique_differences = combine_hex_pos_differences(all_differences)
                 input1, input2 = compare_files(filename1, filename2, all_differences)
 
-    else:
         #Write the output to a text file
         output_file = os.path.join('8Bits', f"{section}.json")
         with open(output_file, 'w') as f:
