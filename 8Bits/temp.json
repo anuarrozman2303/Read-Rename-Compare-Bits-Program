@@ -1,4 +1,10 @@
-"tCod":[diff,min,max],
+"tCod":[temp,62,64]
 "tDis":[incr,min temp,max temp],
-"tAdd":<hex pos>,
-"tUnit":"<Unit>",
+"tAdd":35
+"tUnit":"C"
+
+
+temp32
+
+62,
+64

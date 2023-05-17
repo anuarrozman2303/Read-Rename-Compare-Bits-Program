@@ -48,6 +48,10 @@ def combine_hex_pos_differences(differences):
         else:
             diff_str = ','.join(str(d) for d in sorted(hex_pos_differences))
         output.append(f"[{hex_pos}: {diff_str}]")
+        if section == "temp":
+            print(output)
+            outputmin = min(output)
+            print(outputmin)
     return output
 
 def compare_files(file1, file2, differences_set):

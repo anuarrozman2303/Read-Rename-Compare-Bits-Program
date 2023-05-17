@@ -67,11 +67,11 @@ def compare_files(file1, file2, differences_set):
             # Remove other things except 8-bits binary
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
-            for i in range()
             if section == "temp":
                 tempinput.append(input1)
-                #tempinput.append(input2)
-            print(tempinput)
+                tempinput.append(input2)
+                print(tempinput)
+                print("----------")
             diff_pos = (int(diff_str) % 8)
             #print(f'{section} ' + diff_str + " " + str(diff_pos))
             cond1 = diff_pos in range(1, 5)
@@ -94,9 +94,6 @@ def compare_files(file1, file2, differences_set):
                 jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},255,12],[{hex_pos},{input2},12]]}}'
             differences.append((header,jsonformat1,))
             differences.append((header,jsonformat2,))
-            if section == 'temp':
-                print(input1)
-                print(input2)
     if differences:
         differences_set.update(differences)
     return input1,input2

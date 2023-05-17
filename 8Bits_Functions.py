@@ -1,6 +1,5 @@
 import os
 import configparser
-import re
 
 def process_file(filename):
     with open(filename, 'r') as f:
@@ -130,9 +129,9 @@ for section in config.sections():
 
     #print(unique_differences)
     # Write the output to a text file
-    output_file = os.path.join('8Bits', f"{section}.txt")
+    output_file = os.path.join('8Bits', f"{section}.json")
     with open(output_file, 'w') as f:
-        f.write('\n'.join(unique_differences))
+        f.write(''.join(unique_differences))
 
 
 
