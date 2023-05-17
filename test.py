@@ -106,6 +106,7 @@ for section in config.sections():
                 unique_differences = combine_hex_pos_differences(all_differences)
                 input1, input2 = compare_files(filename1, filename2, all_differences)
 
+    else:
         #Write the output to a text file
         output_file = os.path.join('8Bits', f"{section}.json")
         with open(output_file, 'w') as f:
