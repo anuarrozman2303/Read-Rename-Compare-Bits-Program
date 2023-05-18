@@ -67,7 +67,6 @@ def compare_files(file1, file2, differences_set):
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
             diff_pos = (int(diff_str) % 8)
-            print(len(str(diff_pos)))
             #print(f'{section} ' + diff_str + " " + str(diff_pos))
             cond1 = diff_pos in range(1, 5)
             cond2 = diff_pos in range(5, 9) or diff_pos == 0

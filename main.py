@@ -46,14 +46,13 @@ def compare_files(file1, file2, differences_set):
     content2,group2 = process_file(file2)
     differences = []
     diff_str = []
-    TempInput = []
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
             hex_pos = (i // 8) + 1
             if hex_pos in [8, 16, 35]:
                 continue
             diff_str = str(i+1)
-    tempinput = []
+
     for i in range(0, len(content1), 8):
         group1 = content1[i:i+8]
         group2 = content2[i:i+8]
@@ -67,11 +66,6 @@ def compare_files(file1, file2, differences_set):
             # Remove other things except 8-bits binary
             input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
             input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
-            if section == "temp":
-                tempinput.append(input1)
-                tempinput.append(input2)
-                print(tempinput)
-                print("----------")
             diff_pos = (int(diff_str) % 8)
             #print(f'{section} ' + diff_str + " " + str(diff_pos))
             cond1 = diff_pos in range(1, 5)
@@ -93,10 +87,9 @@ def compare_files(file1, file2, differences_set):
                 jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},255,12],[{hex_pos},{input1},12]]}}'
                 jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},255,12],[{hex_pos},{input2},12]]}}'
             differences.append((header,jsonformat1,))
-            differences.append((header,jsonformat2,))
+            #differences.append((header,jsonformat2,))
     if differences:
         differences_set.update(differences)
-    return input1,input2
 
 config = configparser.ConfigParser()
 config.read('configsample.ini')
@@ -122,24 +115,14 @@ for section in config.sections():
                 item1, filename1 = section_results[i]
                 item2, filename2 = section_results[j]
                 compare_files(filename1, filename2, all_differences)
+    # Get the unique differences
+    unique_differences = combine_hex_pos_differences(all_differences)
 
-        # Get the unique differences
-        unique_differences = combine_hex_pos_differences(all_differences)
-        input1, input2 = compare_files(filename1, filename2, all_differences)     
+    #print(unique_differences)
+    # Write the output to a text file
+    output_file = os.path.join('8Bits', f"{section}.json")
+    with open(output_file, 'w') as f:
+        f.write('\n'.join(unique_differences))
 
-    if section == 'temp':
-        output_file = os.path.join('8Bits', f"{section}.json")
-        with open(output_file, 'w') as f:
-            input1 = int(binary_str1.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2) 
-            input2 = int(binary_str2.replace('[','').replace(']','').replace(',','').replace(' ','').replace("'", ''), 2)
-            f.write(f'"tCod":{[input1, input2]},\n')
-            f.write('"tDis":[incr,min temp,max temp],\n')
-            f.write('"tAdd":<hex pos>,\n')
-            f.write('"tUnit":"<Unit>",\n')
-    
-    else:
-        #print(unique_differences)
-        # Write the output to a text file
-        output_file = os.path.join('8Bits', f"{section}.json")
-        with open(output_file, 'w') as f:
-            f.write('\n'.join(unique_differences))
+
+
