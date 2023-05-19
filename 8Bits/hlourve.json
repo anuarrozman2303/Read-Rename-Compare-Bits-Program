@@ -1,1 +1,1 @@
-{"id":"hlourve","cmd":[ {"name":"hlouveron.txt","inst":[[26,15,12],[26,15,12]]}
+{"id":"hlourve","cmd":[ {"name":"hlouveroff.txt","inst":[[26,15,12],[26,0,12]]},{"name":"hlouveron.txt","inst":[[26,15,12],[26,15,12]]}
