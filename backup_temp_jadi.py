@@ -61,17 +61,17 @@ def compare_files(file1, file2, differences_set):
             header = '{"id":"' + section + '","cmd":['
 
             if cond1:
-                format1 = f'{{"name":"{file1}","inst":[[{hex_pos},15,12],[{hex_pos},{input1},12]]}}'
-                format2 = f'{{"name":"{file2}","inst":[[{hex_pos},15,12],[{hex_pos},{input2},12]]}}'
+                jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},15,12],[{hex_pos},{input1},12]]}}'
+                jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},15,12],[{hex_pos},{input2},12]]}}'
             if cond2:
-                format1 = f'{{"name":"{file1}","inst":[[{hex_pos},240,12],[{hex_pos},{input1},12]]}}'
-                format2 = f'{{"name":"{file2}","inst":[[{hex_pos},240,12],[{hex_pos},{input2},12]]}}'
+                jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},240,12],[{hex_pos},{input1},12]]}}'
+                jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},240,12],[{hex_pos},{input2},12]]}}'
             if cond3:
-                format1 = f'{{"name":"{file1}","inst":[[{hex_pos},255,12],[{hex_pos},{input1},12]]}}'
-                format2 = f'{{"name":"{file2}","inst":[[{hex_pos},255,12],[{hex_pos},{input2},12]]}}'
+                jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},255,12],[{hex_pos},{input1},12]]}}'
+                jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},255,12],[{hex_pos},{input2},12]]}}'
 
-            differences.append((header, format1))
-            differences.append((header, format2))
+            differences.append((header, jsonformat1))
+            differences.append((header, jsonformat2))
 
     if differences:
         differences_set.update(differences)
@@ -85,7 +85,7 @@ if not os.path.exists('8Bits'):
     os.makedirs('8Bits')
     
 # Open the output file to write all the output
-output_file = os.path.join('8Bits', 'output.txt')
+output_file = os.path.join('8Bits', 'output.json')
 with open(output_file, 'w') as f:
     max_input2 = float('-inf')
     # Loop through each section in the config file

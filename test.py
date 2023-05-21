@@ -34,6 +34,8 @@ def compare_files(file1, file2, differences_set):
     content1, group1 = process_file(file1)
     content2, group2 = process_file(file2)
     differences = []
+    jsonformat1 = f'{{"name":"{file1}","inst":['
+    jsonformat2 = f'{{"name":"{file2}","inst":['
     for i, (line1, line2) in enumerate(zip(content1, content2)):
         if line1 != line2:
             hex_pos = (i // 8) + 1
@@ -61,20 +63,20 @@ def compare_files(file1, file2, differences_set):
             header = '{"id":"' + section + '","cmd":['
 
             if cond1:
-                jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},15,12],[{hex_pos},{input1},12]]}}'
-                jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},15,12],[{hex_pos},{input2},12]]}}'
+                jsonformat1 += f'[{hex_pos},15,12],[{hex_pos},{input1},12],'
+                jsonformat2 += f'[{hex_pos},15,12],[{hex_pos},{input2},12],'
             if cond2:
-                jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},240,12],[{hex_pos},{input1},12]]}}'
-                jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},240,12],[{hex_pos},{input2},12]]}}'
+                jsonformat1 += f'[{hex_pos},240,12],[{hex_pos},{input1},12],'
+                jsonformat2 += f'[{hex_pos},240,12],[{hex_pos},{input2},12],'
             if cond3:
-                jsonformat1 = f'{{"name":"{file1}","inst":[[{hex_pos},255,12],[{hex_pos},{input1},12]]}}'
-                jsonformat2 = f'{{"name":"{file2}","inst":[[{hex_pos},255,12],[{hex_pos},{input2},12]]}}'
+                jsonformat1 += f'[{hex_pos},255,12],[{hex_pos},{input1},12],'
+                jsonformat2 += f'[{hex_pos},255,12],[{hex_pos},{input2},12],'
 
-            differences.append((header, jsonformat1))
-            differences.append((header, jsonformat2))
+    jsonformat1 = jsonformat1.rstrip(',') + ']}'
+    jsonformat2 = jsonformat2.rstrip(',') + ']}'
 
-    if differences:
-        differences_set.update(differences)
+    if jsonformat1 != jsonformat2:
+        differences_set.add((jsonformat1, jsonformat2))
     return hex_pos, input1, input2, differences
 
 config = configparser.ConfigParser()
@@ -95,6 +97,7 @@ with open(output_file, 'w') as f:
         section_results = [(item, filename) for item, filename in config.items(section) if os.path.isfile(filename)]
         if len(section_results) > 1:
             # Compare the files in this section
+            hex_pos = None
             first_comparison_processed = False  # Initialize the flag variable
             for i in range(len(section_results)):
                 for j in range(i+1, len(section_results)):
@@ -113,7 +116,7 @@ with open(output_file, 'w') as f:
 
         # Check if the section is "temp"
         if section != "temp":
-            f.write('\n'.join(unique_differences))
+            f.write(''.join(unique_differences))
         else:
             # Retrieve the items in the "temp" section
             temp_items = config.items(section)
@@ -126,8 +129,7 @@ with open(output_file, 'w') as f:
             disp = int(min_input1 / temp1)
             mintemp = min_input1
             maxtemp = max_input2
-            print(hex_pos)
-    f.write('\n\n"tCod":[' + f"{disp}," + f"{mintemp}," + f"{maxtemp}],\n")
-    f.write('"tDis":[' + f"{incr}," + f"{temp1},{templ}],\n")
-    f.write('"tAdd":' + f"{hex_pos},\n")
-    f.write('"tUnit":' + '"C"\n')
+            f.write('\n"tCod":[' + f"{disp}," + f"{mintemp}," + f"{maxtemp}],\n")
+            f.write('"tDis":[' + f"{incr}," + f"{temp1},{templ}],\n")
+            f.write('"tAdd":' + f"{hex_pos},\n")
+            f.write('"tUnit":' + '"C"\n')
